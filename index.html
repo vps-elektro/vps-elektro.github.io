@@ -157,6 +157,37 @@
       display: flex;
     }
 
+    .map-section {
+      padding: 70px 40px;
+      background-color: #f4f4f4;
+    }
+
+    .map-section h2 {
+      margin-top: 0;
+      margin-bottom: 30px;
+
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      font-size: 32px;
+    }
+
+    .map-container {
+      width: 100%;
+      max-width: 1100px;
+      height: 450px;
+
+      margin: 0 auto;
+
+      overflow: hidden;
+      border-radius: 6px;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  
+
     @media (max-width: 1000px) {
 
       .navigation {
@@ -273,6 +304,21 @@
       Kontaktujte nás
     </a>
   </header>
+
+  <section class="map-section">
+    <h2>Kde nás najdete</h2>
+
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4444.253299089107!2d16.300956877511798!3d49.039711487927775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4712a56c2503ecd1%3A0xb6c2a6fd37b48dd!2sV.P.S.%20ELEKTRO%2C%20s.r.o.!5e1!3m2!1scs!2scz!4v1785433925861!5m2!1scs!2scz"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin">
+      </iframe>
+    </div>
 
 </body>
 </html>
