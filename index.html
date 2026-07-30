@@ -16,6 +16,45 @@
       text-align: center;
     }
 
+    .social-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      height: 45px;
+      padding: 0 40px;
+
+      background-color: white;
+    }
+
+    .facebook-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 34px;
+      height: 34px;
+
+      background-color: #1877f2;
+      color: white;
+
+      text-decoration: none;
+      border-radius: 50%;
+
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .facebook-link:hover {
+      background-color: #125fc2;
+      transform: scale(1.1);
+    }
+
+    .facebook-icon {
+      font-family: Arial, sans-serif;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
     /* Navigační lišta */
 
     .navigation {
@@ -173,6 +212,18 @@
   
   
 <body>
+
+<div class="social-bar">
+  <a href="https://www.facebook.com/profile.php?id=100066932431196"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="facebook-link"
+     aria-label="Facebook VPS ELEKTRO">
+
+    <span class="facebook-icon">f</span>
+
+  </a>
+</div>
 
 <script>
   function toggleMenu() {
