@@ -22,7 +22,7 @@
       align-items: center;
 
       height: 45px;
-      padding: 0 40px;
+      padding: 0 120px 0 40px;
 
       background-color: white;
     }
@@ -31,27 +31,40 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      gap: 8px;
 
-      width: 34px;
-      height: 34px;
-
-      background-color: #1877f2;
-      color: white;
-
+      color: #1e532f;
       text-decoration: none;
-      border-radius: 50%;
 
-      transition: transform 0.2s, background-color 0.2s;
+      transition: transform 0.2s;
     }
 
     .facebook-link:hover {
-      background-color: #125fc2;
       transform: scale(1.1);
     }
 
     .facebook-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 28px;
+      height: 28px;
+
+      background-color:#1e532f;
+      color:white;
+
+      border-radius: 4px;
+      
       font-family: Arial, sans-serif;
-      font-size: 26px;
+      font-size: 23px;
+      font-weight: bold;
+    }
+
+    .facebook-text {
+      color: #111;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      font-size: 14 px;
       font-weight: bold;
     }
 
@@ -221,6 +234,7 @@
      aria-label="Facebook VPS ELEKTRO">
 
     <span class="facebook-icon">f</span>
+    <span class="facebook-text">VPS ELEKTRO</span>
 
   </a>
 </div>
