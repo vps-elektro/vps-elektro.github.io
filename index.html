@@ -23,25 +23,35 @@
       top: 20px;
       z-index: 1000;
 
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      
       background-color: white;
       padding: 0;
-      text-align: center;
     }
 
     .navigation a {
-      display: inline-block;
+      display: flex;
+      align-items: center;
       
-      color: black;
+      color: #111;
+      text-decoration: none;
+
+      font-family: "Trebuchet MS", Arial, sans-serif;
       font-size: 20px;
       font-weight: normal;
       text-transform: uppercase;
       
-      padding; 45px 32px;
-      margin: 0;
+      padding: 35px 28px;
+
+      transition: background-color 0.25s, color 0.25s;
     }
 
     .navigation a:hover {
-      text-decoration: underline;
+      background-color: #1e532f;
+      color: white;
+      text-decoration: none;
     }
     
     /* Záhlavý stránky */
