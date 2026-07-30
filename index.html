@@ -14,6 +14,7 @@
       background-color: #f4f4f4;
       color: #222;
       text-align: center;
+      overflow-x: hidden;
     }
 
     /* Navigační lišta */
@@ -95,6 +96,47 @@
 
     .button:hover {
       background-color: #286b3d;
+    }
+
+    @media (max-width: 768px) {
+
+      .navigation {
+        top:0;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      .navigation .logo-link {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 0;
+      }
+
+      .logo {
+        height: 55px;
+        width: auto;
+      }
+
+      .navigation a:not(.logo-link) {
+        box-sizing: border-box;
+        flex: 1 1 50%;
+        justify-content: center;
+
+        padding: 15px 8px;
+        font-size: 14px;
+      }
+
+      header {
+        padding: 60px 20px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      p {
+        font-size: 18px;
+      }
     }
     
   </style>
