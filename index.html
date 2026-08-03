@@ -539,6 +539,8 @@
   leftArrow.addEventListener("click", function() {showSlide(currentSlide - 1)});
 
   dots.forEach(function (dot, index) {dot.addEventListener("click", function () {showSlide(index);});});
+
+  setInterval(function() {showSlide(currentSlide + 1);}, 15000);
     
 </script>
 
