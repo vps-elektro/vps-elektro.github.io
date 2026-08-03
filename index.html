@@ -295,19 +295,27 @@
     }
 
     .slide-dot {
-      width: 13px;
-      height: 13px;
+      flex: 0 0 14;
+      width: 14px;
+      height: 14px;
+      min-width: 14px;
+      min-height: 14px;
+      
       padding: 0;
+      marin: 0;
 
       border: 2px solid white;
       border-radius: 50%;
       background-color: transparent;
 
+      appearence: none;
+      box-sizing: border-box;
       cursor: pointer;
     }
 
     .slide-dot.active {
-      background-color: white;
+      border-color: #1e532f;
+      background-color: #1e532f;
     }
 
     .menu-toggle {
