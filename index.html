@@ -213,6 +213,7 @@
       z-index: 3;
 
       border: none;
+      border-radius: 10px;
       background-color: #1e532f;
       color: white;
 
@@ -221,6 +222,13 @@
 
       font-size: 35px;
       cursor: pointer;
+
+      transition: background-color 0.25s, transform 0.25s;
+    }
+
+    .slider-arrow:hover {
+      background-color: rgba(40, 107, 61, 0.95);
+      transform: translateY(-50%) scale(1.05)
     }
 
     .slider-arrow-left {
