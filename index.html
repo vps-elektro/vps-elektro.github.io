@@ -64,7 +64,7 @@
     .facebook-text {
       color: #111;
       font-family: "Trebuchet MS", Arial, sans-serif;
-      font-size: 14 px;
+      font-size: 14px;
       font-weight: bold;
     }
 
@@ -295,15 +295,71 @@
     </div>
   </nav>
 
-  <header>
-    <h1>Ahoj Pavli,</h1>
+  <section class="slider">
 
-    <p>jak se máš?</p>
+    <div class="slide active">
+      <img>
 
-    <a class="button" href="mailto:panacek.jr@vps-elektro.cz">
-      Kontaktujte nás
-    </a>
-  </header>
+      <div class="slide-text">
+        <h2>Osazujeme desky plošných spojů</h2>
+        <p>od jednoho kusu až po malosériovou výrobu</p>
+      </div>
+      
+    </div>
+
+    <div class="slide">
+      <img>
+
+      <div class="slide-text">
+        <h2>Vyrábíme vinuté díly</h2>
+        <p>od jednoduchých toroidních cívek až po složité transformátory</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img>
+
+      <div class="slide-text">
+        <h2>Vyrábíme kabelové konfekce</h2>
+        <p>od propojovacích kabelů až po komplexní kabelové svazky</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img>
+
+      <div class="slide-text">
+        <h2>Obrábíme kovy a nabízíme 3D tisk</h2>
+        <p>od výroby jednoduchých dílů až po komplexní technologická řešení</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img>
+
+      <div class="slide-text">
+        <h2>Jednotlivě i jako komplexní řešení pod jednou střechou</h2>
+        <p>každou technologii nabízíme samostatně, nebo je propojíme do uceleného výrobního procesu</p>
+      </div>
+    </div>
+
+    <button class="slider-arrow slider-arrow-left" aria-label="Předchozí snímek">
+      &#10094;
+    </button>
+
+    <button class="slider-arrow slider-arrow-right" aria-label="Následující snímek">
+      &#10095;
+    </button>
+
+    <div class="slider-dots">
+      <button class="slider-dot active" aria-label="Snímek 1"></button>
+      <button class="slider-dot" aria-label="Snímek 2"></button>
+      <button class="slider-dot" aria-label="Snímek 3"></button>
+      <button class="slider-dot" aria-label="Snímek 4"></button>
+      <button class="slider-dot" aria-label="Snímek 5"></button>
+    </div>
+  
+  </section>
 
   <section class="map-section">
     <h2>Kde nás najdete</h2>
@@ -319,6 +375,7 @@
         referrerpolicy="strict-origin-when-cross-origin">
       </iframe>
     </div>
-
+  </section>
+    
 </body>
 </html>
