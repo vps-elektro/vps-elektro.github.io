@@ -532,16 +532,26 @@
     }
 
     slides[currentSlide].classList.add("active");
-    dots[currentSlide].classList.add("active");
+    dots[currentSlide].classList.add("active");    
   }
 
-  rightArrow.addEventListener("click", function() {showSlide(currentSlide + 1)});
-  leftArrow.addEventListener("click", function() {showSlide(currentSlide - 1)});
-
-  dots.forEach(function (dot, index) {dot.addEventListener("click", function () {showSlide(index);});});
-
-  setInterval(function() {showSlide(currentSlide + 1);}, 15000);
+  let slideTimer;
     
+  function startSlideTimer() {
+    clearInterval(slideTimer);
+
+    slideTimer = setInterval(function () {
+      showSlide(currentSlide + 1);
+      }, 15000);
+    }
+    
+  rightArrow.addEventListener("click", function() {showSlide(currentSlide + 1); startSlideTimer();});
+  leftArrow.addEventListener("click", function() {showSlide(currentSlide - 1); startSlideTimer();});
+
+  dots.forEach(function (dot, index) {dot.addEventListener("click", function () {showSlide(index); startSlideTimer()});});
+
+  startSlideTimer();
+  
 </script>
 
   <section class="map-section">
