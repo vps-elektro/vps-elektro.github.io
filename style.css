@@ -427,11 +427,6 @@ body {
     font-weight: normal;
   }
 
-  .chevron-title {
-    margin-top: 6px;
-    font-size: 16px;
-  }
-
   .chevron-detail {
     width: calc(100% - 40px);
     max-width: none;
