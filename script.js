@@ -50,3 +50,24 @@ if (slides.length > 0 &&
 
   startSlideTimer();
 }
+
+const chevronItems = document.querySelectorAll(".chevron-item");
+
+const chevronDetailTitle = document.getElementById("chevronDetailTitle");
+
+const chevronDetailText = document.getElementById("chevronDetailText");
+
+if (chevronItems > 0 &&
+    chevronDetailTitle &&
+    chevronDetailText) {
+
+  const chevronData = [
+    {
+      title: "Založení společnosti",
+      text: ""
+    },
+    {
+      title:
+    }
+  ]
+    }
