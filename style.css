@@ -334,6 +334,22 @@ body {
     text-decoration: underline;
   }
 
+  .page-content {
+    min-height: 500px;
+    padding: 0;
+
+    box-sizing: border-box;
+  }
+
+  .page-content h1 {
+    margin-top: 20;
+
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 40 px;
+
+    color: #1e532f;
+  }
+
 @media (max-width: 1000px) {
 
   .navigation {
@@ -444,20 +460,5 @@ body {
     padding: 8px 12px;
   }
 
-  .page-content {
-    min-height: 500px;
-    padding: 0;
-
-    box-sizing: border-box;
-  }
-
-  .page-content h1 {
-    margin-top: 20;
-
-    font-family: "Trebuchet MS", Arial, sans-serif;
-    font-size: 40 px;
-
-    color: #1e532f;
-  }
 } 
     
