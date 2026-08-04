@@ -361,10 +361,10 @@ body {
   .chevron-timeline {
     display: flex;
     justify-content: center;
-    align-item: center;
+    align-items: center;
     gap: 16px;
 
-    max-width: 1100;
+    max-width: 1100px;
     margin: 50px auto;
   }
 
@@ -373,7 +373,7 @@ body {
 
     position: relative;
 
-    width: 100px;
+    width: 220px;
     min-height: 80px;
     padding: 15px 35px;
 
@@ -381,8 +381,61 @@ body {
     background-color: #cfcfcf;
     color: #222;
 
-    clip-path: polygone()
+    clip-path: polygon(
+      0 0,
+      calc(100% - 30px) 0,
+      100% 50%,
+      calc(100% - 30px) 100%,
+      0 100%,
+      30px 50%
+    );
+
+    cursor: pointer;
+    opacity: 0.6;
+
+    transition: width 0.3s, min-height 0.3s, opacity 0.3s, transform 0.3s, background-color 0.3s;
   }
+
+  .chevron-item.visible {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .chevron-item.active {
+    width: 340px;
+    min-height: 115px;
+
+    background-color: #1e532f;
+    color: white;
+
+    opacity: 1;
+    transform: scale(1.03);
+  }
+
+  .chevron-year {
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  .chevron-title {
+    margin-top: 6px;
+    font-size: 16px;
+  }
+
+  .chevron-detail {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 25px;
+
+    border-radius: 8px;
+    background-color: white;
+
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+
+}
 
 @media (max-width: 1000px) {
 
