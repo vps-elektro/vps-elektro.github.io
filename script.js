@@ -57,7 +57,7 @@ const chevronDetailTitle = document.getElementById("chevronDetailTitle");
 
 const chevronDetailText = document.getElementById("chevronDetailText");
 
-if (chevronItems > 0 &&
+if (chevronItems.length > 0 &&
     chevronDetailTitle &&
     chevronDetailText) {
 
@@ -102,5 +102,49 @@ if (chevronItems > 0 &&
       title: "Vstříc budousnosti",
       text: "Firma slaví 30 let. Inovace technologií selektivního pájení pořízením ERSA VERSAFLOW ONE. Rozšíření o dalšího pájecího robota, laserové vypalování a čištění suchým ledem. Práce na PR firmy"
     }
-  ]
+  ];
+
+  let activeChevron = 0;
+
+  function showChevron(index) {
+    activeChevron = index;
+
+    let firstVisible;
+
+    if (activeChevron === 0) {
+      firstVisible = 0;
+    } else if (activeChevron === chevronItems.length - 1) {
+      firstVisible = chevronItems.length - 3; 
+    } else {
+      firstVisible = activeChevron - 1; 
     }
+  
+    const lastVisible = firstVisible + 2;
+
+    chevronItems.forEach(function (item, itemIndex) {
+      item.classList.remove("visible", "active");
+
+      if (
+        itemIndex >= firstVisible &&
+        itemIndex <= lastVisible
+      ) {
+        item.classList.add("visible");
+      }
+
+      if (itemIndex === activeChevron) {
+        item.classList.add("active");
+      }
+    });
+
+    chevronDetailTitle.textContent = chevronData[activeChevron].title;
+    chevronDetailText.textContent = chevronData[activeChevron].text;
+  }
+
+chevronItems.forEach(function(item, index) {
+  item.addEventListener("click", function() {
+    showChevron(index);
+  });
+});
+
+showChevron(0);
+}
