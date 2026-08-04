@@ -354,6 +354,36 @@ body {
     color: #1e532f;
   }
 
+  .history-section {
+    padding: 0;
+  }
+
+  .chevron-timeline {
+    display: flex;
+    justify-content: center;
+    align-item: center;
+    gap: 16px;
+
+    max-width: 1100;
+    margin: 50px auto;
+  }
+
+  .chevron-item {
+    display: none;
+
+    position: relative;
+
+    width: 100px;
+    min-height: 80px;
+    padding: 15px 35px;
+
+    border: none;
+    background-color: #cfcfcf;
+    color: #222;
+
+    clip-path: polygone()
+  }
+
 @media (max-width: 1000px) {
 
   .navigation {
@@ -463,6 +493,5 @@ body {
   .pdf-links a {
     padding: 8px 12px;
   }
-
 } 
     
