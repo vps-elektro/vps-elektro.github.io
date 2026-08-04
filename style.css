@@ -337,6 +337,7 @@ body {
   .page-content {
     min-height: 0;
     padding: 0;
+    margin: 10px
     box-sizing: border-box;
     width: 100%;
 
