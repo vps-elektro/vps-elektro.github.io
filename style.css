@@ -473,6 +473,10 @@ body {
   margin: 0 auto 55px;
 }
 
+.about-block p + p {
+  margin-top: 24px;
+}
+
 .about-introduction {
   max-width: 950px;
   margin: 0 auto 70px;
