@@ -362,7 +362,7 @@ body {
 
   .history-section {
     width: 100%;
-    margin: 25px 0 0 0;
+    margin: 0 0 0 0;
     padding: 0;
   }
 
@@ -373,7 +373,7 @@ body {
     gap: 12px;
 
     width: 100%;
-    margin: 25px 0 0;
+    margin: 0 0 0;
     padding: 0 20px;
 
     box-sizing: border-box;
@@ -397,8 +397,7 @@ body {
       calc(100% - 22px) 0,
       100% 50%,
       calc(100% - 22px) 100%,
-      0 100%,
-      30px 50%
+      0 100%
     );
 
     box-sizing: border-box;
