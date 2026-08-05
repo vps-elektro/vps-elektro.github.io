@@ -553,7 +553,7 @@ body {
 }
 
 #aboutText {
-  scroll-margin-top: 220px;
+  scroll-margin-top: 600px;
 }
 
 @media (max-width: 1000px) {
