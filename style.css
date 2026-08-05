@@ -460,6 +460,41 @@ body {
   object-position: center bottom;
 }
 
+.about-content {
+  width: 80%
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.about-block {
+  max-width: 950px;
+  margin: 0 auto 65px;
+}
+
+.about-introduction {
+  max-width: 950px;
+  margin: 0 auto 75px;
+  font-size: 22px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.about-block h2 {
+  margin: 0 0 22px;
+  color: #1e532f;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 40px;
+  line-height: 1.15;
+}
+
+.about-block p {
+  max-width: 850px;
+  margin: 0 auto;
+  font-size: 19px;
+  line-height:1.65;
+}
+
 @media (max-width: 1000px) {
 
   .navigation {
