@@ -457,27 +457,27 @@ body {
   width: 100%;
 
   object-fit: cover;
-  object-position: center bottom;
+  object-position: center top;
 }
 
 .about-content {
   width: 80%
-  max-width: 1100px;
+  max-width: 1050px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 50px 25px;
 }
 
 .about-block {
-  max-width: 950px;
-  margin: 0 auto 65px;
+  max-width: 900px;
+  margin: 0 auto 55px;
 }
 
 .about-introduction {
   max-width: 950px;
-  margin: 0 auto 75px;
+  margin: 0 auto 70px;
   font-size: 22px;
   line-height: 1.6;
-  font-weight: 500;
+  text-align: center;
 }
 
 .about-block h2 {
@@ -486,6 +486,7 @@ body {
   font-family: "Trebuchet MS", Arial, sans-serif;
   font-size: 40px;
   line-height: 1.15;
+  text-align: center;
 }
 
 .about-block p {
@@ -493,6 +494,7 @@ body {
   margin: 0 auto;
   font-size: 19px;
   line-height:1.65;
+  text-align: left;
 }
 
 @media (max-width: 1000px) {
