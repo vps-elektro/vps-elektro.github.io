@@ -552,6 +552,10 @@ body {
   background-color: #286b3d;
 }
 
+#aboutText {
+  scroll-margin-top: 220px;
+}
+
 @media (max-width: 1000px) {
 
   .navigation {
