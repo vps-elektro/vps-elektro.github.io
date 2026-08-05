@@ -501,7 +501,17 @@ body {
   line-height:1.65;
   text-align: justify;
   text-indent: 30px;
-  hyphens: auto;
+  hyphens: none;
+}
+
+.about-heading::before {
+  content: "»";
+  margin-right: 14px;
+}
+
+.about-heading::after {
+  content: "«";
+  margin-left: 14px;
 }
 
 @media (max-width: 1000px) {
