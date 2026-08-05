@@ -515,7 +515,7 @@ body {
 
 .scroll-down {
   position: absolute;
-  bottom: 30px;
+  top: 100px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
