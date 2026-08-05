@@ -384,8 +384,8 @@ body {
 
     position: relative;
 
-    width: 24%;
-    min-height: 65px;
+    width: 20%;
+    min-height: 55px;
     padding: 10px 30px;
 
     border: none;
@@ -394,9 +394,9 @@ body {
 
     clip-path: polygon(
       0 0,
-      calc(100% - 30px) 0,
+      calc(100% - 22px) 0,
       100% 50%,
-      calc(100% - 30px) 100%,
+      calc(100% - 22px) 100%,
       0 100%,
       30px 50%
     );
@@ -417,7 +417,7 @@ body {
 
   .chevron-item.active {
     width: 35%;
-    min-height: 80px;
+    min-height: 70px;
 
     background-color: #1e532f;
     color: white;
@@ -428,7 +428,7 @@ body {
 
   .chevron-year {
     font-size: 18px;
-    font-weight: normal;
+    font-weight: bold;
   }
 
   .chevron-detail {
