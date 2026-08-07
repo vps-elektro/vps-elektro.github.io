@@ -593,6 +593,29 @@ body {
   text-transform: uppercase;
 }
 
+.history-intro {
+  width: 80%;
+  max-width: 1050px;
+  margin: 70px auto 40px auto;
+  rext-align: center;
+}
+
+.history-intro h2 {
+  margin: 0 0 12px 0;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 40px;
+  font-weight: normal;
+  color: #1e532f;
+}
+
+.history-intro p {
+  margin: 0;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 22px;
+  font-weight: normal;
+  color: #555;
+}
+
 @media (max-width: 1000px) {
 
   .navigation {
