@@ -282,7 +282,7 @@ body {
   }
 
   .iso-link strong {
-      font-size: 16px;
+    font-size: 16px;
   }
 
   .iso-link span {
@@ -294,14 +294,14 @@ body {
   }
 
   .iso-9001 {
-    top: 58%;
+    top: 85%;
     left: 18%;
     width: 28%;
     height: 12%;
   }
 
   .iso-14001 {
-    top: 58%;
+    top: 85%;
     right: 18%;
     width: 28%;
     height: 12%;
