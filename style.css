@@ -290,7 +290,8 @@ body {
   }
 
   .iso-link:hover {
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: #1e532f;
+    color: white;
   }
 
   .iso-9001 {
