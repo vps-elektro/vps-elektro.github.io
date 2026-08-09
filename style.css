@@ -220,7 +220,6 @@ body {
     align-items: center;
     gap: 80px;
     width: 80%;
-    max-width: 1000px;
     margin: 0 auto;
   }
 
@@ -230,8 +229,8 @@ body {
     justify-content: center;
     align-items: center;
 
-    width: 350px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
   }
 
   .certification-image {
