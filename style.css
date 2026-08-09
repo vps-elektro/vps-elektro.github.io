@@ -258,6 +258,30 @@ body {
     height: 100%;
   }
 
+  .iso-card {
+    position: relative;
+  }
+
+  .iso-link {
+    position: absolute;
+    display: block;
+    z-index: 11;
+  }
+
+  .iso-9001 {
+    top: 58%;
+    left: 18%;
+    width: 28%;
+    height: 12%;
+  }
+
+  .iso-14001 {
+    top: 58%;
+    right: 18%;
+    width: 28%;
+    height: 12%;
+  }
+
   .menu-toggle {
     display: none;
   }
