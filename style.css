@@ -752,6 +752,66 @@ body {
   color: #555;
 }
 
+/* Služby a výroba */
+.services-page {
+  width: 100%;
+}
+
+.services-hero {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+}
+
+.services-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.services-hero-text {
+  position: absolute;
+  top: 50%;
+  left:50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 80%;
+  max-width: 1000px;
+
+  color: white;
+  text-align: center;
+
+  z-index: 2;
+}
+
+.services-hero-text h1 {
+  margin: 0 0 15px;
+
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 48px;
+}
+
+.services-hero-text p {
+  margin: 0;
+
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 24px;
+}
+
+.services-hero::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-color: rgba(0, 0, 0, 0.3);
+
+  z-index: 1;
+}
+
 @media (max-width: 1000px) {
 
   .navigation {
