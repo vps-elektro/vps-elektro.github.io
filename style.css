@@ -998,14 +998,14 @@ body {
 .process-section {
   width: 100%;
   background-color: #f4f4f4;
+  padding: 10px 20px;
 }
 
 .process-navigation {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  gap: 12px;
-  padding: 20px, 10px, 20px, 10px;
+  gap: 15px;
 
   width: 100%;
   margin: 0 auto;
@@ -1037,8 +1037,8 @@ body {
 .process-item img {
   display: block;
 
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
 
   object-fit: contain;
   margin-bottom: 10px;
