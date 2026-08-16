@@ -1058,11 +1058,22 @@ body {
 
 .process-item.active {
   background-color: #1e532f;
+  border-color: #1e532f;
+}
+
+.process-item.active:hover {
+  background-color: #1e532f;
+}
+
+.process-item.active img {
+  filter: brightness(0) invert(1);
 }
 
 .process-item.active span {
   color: white;
 }
+
+
 
 @media (max-width: 1000px) {
 
