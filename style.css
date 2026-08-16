@@ -999,6 +999,7 @@ body {
   width: 100%;
   background-color: #f4f4f4;
   padding: 10px 20px;
+  box-sizing: border-box;
 }
 
 .process-navigation {
