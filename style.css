@@ -144,7 +144,7 @@ body {
 
   .slider-arrow:hover {
     background-color: rgba(40, 107, 61, 0.95);
-    transform: translateY(-50%) scale(1.05)
+    transform: translateY(-50%) scale(1.05);
   }
 
   .slider-arrow-left {
@@ -264,7 +264,6 @@ body {
 
   .iso-link {
     position: absolute;
-    display: block;
     z-index: 11;
 
     display: flex;
@@ -321,7 +320,6 @@ body {
   .iso-content .certification-image {
     display: block;
     max-width: 100%;  
-    max-height: auto;
   }
 
   .iso-card:hover .iso-content {
@@ -730,7 +728,7 @@ body {
   width: 80%;
   max-width: 1050px;
   margin: 70px auto 40px auto;
-  rext-align: center;
+  text-align: center;
 }
 
 .history-intro h2 {
