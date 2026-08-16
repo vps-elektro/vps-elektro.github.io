@@ -923,6 +923,7 @@ body {
 }
 
 .leader-section {
+  display: flex;
   width: 50%;
   background-color: #f4f4f4;
   margin: 10px 0 10px 0;
