@@ -923,8 +923,7 @@ body {
 }
 
 .leader-section {
-  display: flex;
-  width: 50%;
+  width: 100%;
   background-color: #f4f4f4;
   margin: 10px 0 10px 0;
 } 
@@ -943,7 +942,7 @@ body {
   align-items: center;
   gap: 50px;
 
-  width: 100%;
+  width: 50%;
   padding: 40px;
   background-color: white;
   box-sizing: border-box;
