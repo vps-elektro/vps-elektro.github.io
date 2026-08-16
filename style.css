@@ -821,7 +821,7 @@ body {
   align-items: stretch;
 
   width: 80%;
-  min-height: 400px;
+  min-height: 300px;
 
   margin: 50px auto;
 
@@ -829,7 +829,7 @@ body {
 }
 
 .services-image {
-  width: 50%;
+  width: 40%;
 }
 
 .services-image img {
@@ -847,7 +847,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  width: 50%;
+  width: 60%;
   padding: 60px 70px;
 
   box-sizing: border-box;
