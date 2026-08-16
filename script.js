@@ -148,3 +148,14 @@ chevronItems.forEach(function(item, index) {
 
 showChevron(0);
 }
+
+const processItems = document.querySelectorAll(".process-item");
+
+processItems.forEach(function(item){
+                    item.addEventListener("click", function() {
+                      processItems.forEach(function(otherItem) {
+                        otherItem.classList.remove("active");
+                      });
+                      item.classList.add("active");
+                    });
+                  });
