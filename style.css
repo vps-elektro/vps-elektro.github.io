@@ -892,6 +892,33 @@ body {
   transform: scale(1.05);
 }
 
+/* Osazování DPS */
+
+.department-header {
+  width: 100%;
+  padding: 30px 60px;
+  box-sizing: border -box;
+
+  background-color: linear-gradient(
+    to right, 
+    #1e532f 0%,
+    rgba(30, 83, 47, 0.75) 45%,
+    rgba(30, 83, 47, 0) 100%,
+  );
+
+  text-align: left;
+}
+
+.department-header h1 {
+  margin: 0;
+
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 48px;
+  font-weight: normal;
+
+  color: white;
+}
+
 @media (max-width: 1000px) {
 
   .navigation {
