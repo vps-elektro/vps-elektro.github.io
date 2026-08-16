@@ -756,6 +756,7 @@ body {
 /* Služby a býroba - úvodní blok */
 .services-page {
   width: 100%;
+  background-color: #f4f4f4;
 }
 
 .services-hero {
@@ -819,10 +820,12 @@ body {
   display: flex;
   align-items: stretch;
 
-  width: 100%;
-  min-height: 500px;
+  width: 80%;
+  min-height: 400px;
 
-  background-color: #f4f4f4;
+  margin: 50px auto;
+
+  background-color: white;
 }
 
 .services-image {
