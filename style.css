@@ -1002,9 +1002,8 @@ body {
 }
 
 .process-navigation {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0,1fr));
   gap: 15px;
 
   width: 100%;
@@ -1014,7 +1013,8 @@ body {
 }
 
 .process-item {
-  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
   aspect-ratio: 1 / 1;
 
   display: flex;
