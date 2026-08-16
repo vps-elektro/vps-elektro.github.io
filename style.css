@@ -753,6 +753,7 @@ body {
 }
 
 /* Služby a výroba */
+/* Služby a býroba - úvodní blok */
 .services-page {
   width: 100%;
 }
@@ -760,7 +761,7 @@ body {
 .services-hero {
   position: relative;
   width: 100%;
-  height: 520px;
+  height: 650px;
   overflow: hidden;
 }
 
@@ -810,6 +811,82 @@ body {
   background-color: rgba(0, 0, 0, 0.3);
 
   z-index: 1;
+}
+
+/* Služby a výroba - konkrétní bloky */
+
+.services-block {
+  display: flex;
+  align-items: stretch;
+
+  width: 100%;
+  min-height: 500px;
+
+  background-color: #f4f4f4;
+}
+
+.services-image {
+  width: 50%;
+}
+
+.services-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.services-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+  padding: 60px 70px;
+
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.services-content h2 {
+  margin: 0 0 25px;
+
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 38px;
+  color: #1e532f;
+}
+
+.services-content p {
+  max-width: 650px;
+  margin: 0 0 35px;
+
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+.services-more {
+  display: inline-block;
+  padding: 14px 28px;
+
+  background-color: #1e532f;
+  color: white;
+
+  text-decoration: none;
+
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 18px;
+
+  border-radius: 4px;
+
+  transition: background-color 0.25s, transform 0.25s;
+}
+
+.services-more:hover {
+  background-color: #286b3d;
+  transform: scale(1.05);
 }
 
 @media (max-width: 1000px) {
