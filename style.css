@@ -1013,6 +1013,7 @@ body {
 
 .process-item {
   flex: 1;
+  aspect-ratio: 1 / 1;
 
   display: flex;
   flex-direction: column;
@@ -1020,9 +1021,11 @@ body {
   align-items: center;
 
   min-width: 0;
-  padding: 20px 10px;
+  padding: 10px;
 
-  border: none;
+  border: 2px solid #1e532f;
+  border-radius: 4px;
+  
   background-color: white;
 
   cursor: pointer;
