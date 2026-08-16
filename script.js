@@ -88,18 +88,18 @@ if (chevronItems.length > 0 &&
     },
     {
       title: "Růst, automatizace a udržitelnost",
-      text: "Nákup pájecího robota QUICK, nové navíjevcí stroje TPC a toroidní navíječka RUFF, zařízení pro kabelovou konfekci SCHLEUDIGER. Zavedení čárových kódů ve skladovém hospodářství, pořízení skladovacího stroje SMT kotoučů Essemtec Cubus. Instalace solárních panelů"
+      text: "Nákup pájecího robota QUICK, nové navíjecí stroje TPC a toroidní navíječka RUFF, zařízení pro kabelovou konfekci SCHLEUNIGER. Zavedení čárových kódů ve skladovém hospodářství, pořízení skladovacího stroje SMT kotoučů Essemtec Cubus. Instalace solárních panelů."
     },
     {
       title: "Flexibilita, obrábění a lakování",
-      text: "Pořízení dávkovače pájecí pasty MYCRONIC JET MY700, CNC obráběcího centra DMN450 a selektivní lakovačky PVA Delta 6. Zisk certifikace a zavedení environmetálního managementu v oboru výroby a vývoje elektroniky podle normy ČSN EN ISO 14001:2016."
+      text: "Pořízení dávkovače pájecí pasty MYCRONIC JET MY700, CNC obráběcího centra DMN 4500 a selektivní lakovačky PVA Delta 6. Zisk certifikace a zavedení environmetálního managementu v oboru výroby a vývoje elektroniky podle normy ČSN EN ISO 14001:2016."
     },
     {
       title: "Rok velkých investic",
-      text: "Zahájení stavby administrativních budov. Rozšíření technologií pro výrobu malých kabelových svazku o stroje značky WiMes Wist-10 a WiBS-10. Tisk na průmyslové 3D tiskárně PRAGOSTROJ."
+      text: "Zahájení stavby administrativních budov. Rozšíření technologií pro výrobu malých kabelových svazků o stroje značky WiMes Wist-10 a WiBS-10. Tisk na průmyslové 3D tiskárně PRAGOSTROJ."
     },
     {
-      title: "Vstříc budousnosti",
+      title: "Vstříc budoucnosti",
       text: "Firma slaví 30 let. Inovace technologií selektivního pájení pořízením ERSA VERSAFLOW ONE. Rozšíření o dalšího pájecího robota QUICK, laserové vypalování a čištění suchým ledem."
     }
   ];
