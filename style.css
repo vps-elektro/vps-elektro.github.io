@@ -896,14 +896,15 @@ body {
 
 .department-header {
   width: 100%;
+  margin: 10px 0 10px 0;
   padding: 30px 60px;
   box-sizing: border-box;
 
   background: linear-gradient(
     to right, 
     #1e532f 0%,
-    rgba(30, 83, 47, 0.75) 45%,
-    rgba(30, 83, 47, 0) 100%
+    rgba(30, 83, 47, 0.75) 35%,
+    rgba(30, 83, 47, 0) 65%
   );
 
   text-align: left;
@@ -913,7 +914,7 @@ body {
   margin: 0;
 
   font-family: "Trebuchet MS", Arial, sans-serif;
-  font-size: 48px;
+  font-size: 32px;
   font-weight: normal;
 
   color: white;
