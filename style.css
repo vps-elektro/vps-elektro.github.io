@@ -993,6 +993,71 @@ body {
   color: black;
 }
 
+/* Ikonky */
+
+.process-section {
+  width: 100%;
+  background-color: #f4f4f4;
+}
+
+.process-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+
+  width: 80%;
+  margin: 0 auto;
+
+  background-color: white;
+}
+
+.process-item {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 0;
+  padding: 20px 10px;
+
+  border: none;
+  background-color: white;
+
+  cursor: pointer;
+  transition: background-color 0.25s, transform 0.25s;
+}
+
+.process-item img {
+  display: block;
+
+  width: 80px;
+  height: 80px;
+
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.process-item span {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 16px;
+  color: #1e532f;
+}
+
+.process-item:hover {
+  background-color: #f4f4f4;
+  transform: scale(1.05);
+}
+
+.process-item.active {
+  background-color: #1e532f;
+}
+
+.process-item.active span {
+  color: white;
+}
+
 @media (max-width: 1000px) {
 
   .navigation {
