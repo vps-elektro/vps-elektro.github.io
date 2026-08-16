@@ -43,6 +43,11 @@ body {
     transition: background-color 0.25s, color 0.25s;
   }
 
+.navigation a.active {
+  background-color: #1e532f;
+  color: white;
+}
+
   .navigation a:hover {
     background-color: #1e532f;
     color: white;
