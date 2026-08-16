@@ -922,6 +922,76 @@ body {
   color: white;
 }
 
+.leader-section {
+  width: 100%;
+  background-color: #f4f4f4;
+  margin: 10px 0 10px 0;
+} 
+
+.leader-section h2 {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+
+  color: #1e532f;
+  text-align: center;
+}
+
+.leader-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+  width: 100%;
+  padding: 40px;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.leader-image {
+  flex: 0 0 35%;
+}
+
+.leader-image img {
+  display: block;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+.leader-quote {
+  flex: 1;
+  text-align: justify;
+}
+
+.leader-quote p {
+  margin: 0 0 30px;
+
+  font-size: 22px;
+  line-height: 1.7;
+
+  color: #222;
+}
+
+.leader-person {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+.leader-person strong {
+  font-size: 19px;
+  color: #1e532f;
+}
+
+.leader-person span {
+  margin: 5px 0 0 0;
+
+  font-size: 16px;
+  color: black;
+}
+
 @media (max-width: 1000px) {
 
   .navigation {
