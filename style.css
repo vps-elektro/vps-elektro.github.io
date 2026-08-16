@@ -895,8 +895,10 @@ body {
 /* Osazování DPS */
 
 .department-header {
+  display: flex;
+  align-items: center;
   width: 100%;
-  margin: 20px 0 10px 0;
+  margin: 10px 0 10px 0;
   padding: 30px 60px;
   box-sizing: border-box;
 
