@@ -897,13 +897,13 @@ body {
 .department-header {
   width: 100%;
   padding: 30px 60px;
-  box-sizing: border -box;
+  box-sizing: border-box;
 
-  background-color: linear-gradient(
+  background: linear-gradient(
     to right, 
     #1e532f 0%,
     rgba(30, 83, 47, 0.75) 45%,
-    rgba(30, 83, 47, 0) 100%,
+    rgba(30, 83, 47, 0) 100%
   );
 
   text-align: left;
