@@ -202,6 +202,8 @@ departmentTitle.addEventListener("click", function() {
     detail.classList.remove("active");
   });
 
+  processNavigation.classList.remove("sticky-mode");
+
   window.scrollTo({
     top: 0,
     behavior: "smooth"
