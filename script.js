@@ -202,10 +202,10 @@ departmentTitle.addEventListener("click", function() {
     detail.classList.remove("active");
   });
 
-  processNavigation.classList.remove("sticky-mode");
+  const headerPosition = departmentHeader.getBoundingClientRect().top + window.scrollY;
 
-  departmentHeader.scrollIntoView({
-    behavior: "smooth",
-    block: "start"
+  window.scrollTo({
+    top: headerPosition - 90,
+    behavior: "smooth"
   });  
 });
