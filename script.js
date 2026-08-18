@@ -150,6 +150,7 @@ showChevron(0);
 }
 
 const processItems = document.querySelectorAll(".process-item");
+const processNavigation = document.querySelector(".process-navigation");
 
 processItems.forEach(function(item){
                     item.addEventListener("click", function() {
@@ -157,5 +158,6 @@ processItems.forEach(function(item){
                         otherItem.classList.remove("active");
                       });
                       item.classList.add("active");
+                      processNavigation.classList.add("sticky-mode");
                     });
                   });
