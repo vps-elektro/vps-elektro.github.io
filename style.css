@@ -925,6 +925,14 @@ body {
   color: white;
 }
 
+.department-title {
+  cursor: pointer;
+}
+
+.department-title:hover {
+  text-decoration: underline;
+}
+
 .leader-section {
   width: 100%;
   background-color: #f4f4f4;
