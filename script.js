@@ -156,6 +156,19 @@ const processSection = document.querySelector(".process-section");
 
 processItems.forEach(function(item){
                     item.addEventListener("click", function() {
+
+                      const isActive = item.classList.contains("active");
+                      const processName = item.dataset.process;
+                      const detail = document.getElementById(processName);
+
+                      if (isActive) {
+                        item.classList.remove("active");
+                        detail.classList.remove("active");
+                        processNavigation.classList.remove("sticky-mode");
+
+                        return;
+                      }
+                      
                       processItems.forEach(function(otherItem) {
                         otherItem.classList.remove("active");
                       });
@@ -165,13 +178,9 @@ processItems.forEach(function(item){
                       });
                       
                       item.classList.add("active");
+                      detail.classList.add("active");
+                      
                       processNavigation.classList.add("sticky-mode");
-
-                      const processName = item.dataset.process;
-
-                      document
-                        .getElementById(processName)
-                        .classList.add("active");
 
                       processSection.scrollIntoView({
                         behavior: "smooth",
