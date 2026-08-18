@@ -151,7 +151,7 @@ showChevron(0);
 
 const processItems = document.querySelectorAll(".process-item");
 const processNavigation = document.querySelector(".process-navigation");
-const processDetails = document.querySelector(".process-detail");
+const processDetails = document.querySelectorAll(".process-detail");
 
 processItems.forEach(function(item){
                     item.addEventListener("click", function() {
