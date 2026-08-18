@@ -151,13 +151,25 @@ showChevron(0);
 
 const processItems = document.querySelectorAll(".process-item");
 const processNavigation = document.querySelector(".process-navigation");
+const processDetails = document.querySelector(".process-detail");
 
 processItems.forEach(function(item){
                     item.addEventListener("click", function() {
                       processItems.forEach(function(otherItem) {
                         otherItem.classList.remove("active");
                       });
+
+                      processDetails.forEach(function(detail) { 
+                         detail.classList.remove("active");
+                      });
+                      
                       item.classList.add("active");
                       processNavigation.classList.add("sticky-mode");
+
+                      const processName = item.dataset.process;
+
+                      document
+                        .getElementById(processName)
+                        .classList.add("active");
                     });
                   });
