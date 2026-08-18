@@ -209,3 +209,23 @@ departmentTitle.addEventListener("click", function() {
     behavior: "smooth"
   });  
 });
+
+
+const photoSliders = document.querySelectorAll(".photo-slider");
+
+photoSliders.forEach(function(slider) {
+
+  const slides = slider.querySelectorAll(".photo-slide");
+  const dots = slider.querySelectorAll(".slider-dot");
+  const prevButton = slider.querySelector(".slider-prev");
+  const nextButton = slider.querySelector(".slider-next");
+
+  let currentPhotoSlide = 0;
+
+  function showPhotoSlide(index) {
+
+    if (index)
+    
+  }
+  
+});
