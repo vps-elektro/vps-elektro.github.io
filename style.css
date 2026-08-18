@@ -902,7 +902,7 @@ body {
   padding: 30px 60px;
   box-sizing: border-box;
   position: sticky;
-  top: 0;
+  top: 170px;
   z-index: 900;
 
   background: linear-gradient(
