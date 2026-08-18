@@ -902,6 +902,8 @@ body {
   padding: 30px 60px;
   box-sizing: border-box;
   position: sticky;
+  top: 0;
+  z-index: 900;
 
   background: linear-gradient(
     to right, 
