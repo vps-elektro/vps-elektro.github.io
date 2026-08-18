@@ -188,3 +188,24 @@ processItems.forEach(function(item){
                       });
                     });
                   });
+
+const departmentTitle = document.querySelector(".department-title");
+const departmentHeader = document.querySelector(".department-header");
+
+departmentTitle.addEventListener("click", function() {
+
+  processItems.forEach(function(item) {
+    item.classList.remove("active");
+  });
+
+  processDetails.forEach(function(detail) {
+    detail.classList.remove("active");
+  });
+
+  processNavigation.classList.remove("sticky-mode");
+
+  departmentHeader.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });  
+});
