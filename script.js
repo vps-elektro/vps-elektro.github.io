@@ -202,10 +202,8 @@ departmentTitle.addEventListener("click", function() {
     detail.classList.remove("active");
   });
 
-  const headerPosition = departmentHeader.getBoundingClientRect().top + window.scrollY;
-
   window.scrollTo({
-    top: headerPosition - 90,
+    top: 0,
     behavior: "smooth"
   });  
 });
