@@ -152,6 +152,7 @@ showChevron(0);
 const processItems = document.querySelectorAll(".process-item");
 const processNavigation = document.querySelector(".process-navigation");
 const processDetails = document.querySelectorAll(".process-detail");
+const processSection = document.querySelector(".process-section");
 
 processItems.forEach(function(item){
                     item.addEventListener("click", function() {
@@ -171,5 +172,10 @@ processItems.forEach(function(item){
                       document
                         .getElementById(processName)
                         .classList.add("active");
+
+                      processSection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                      });
                     });
                   });
