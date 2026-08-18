@@ -1092,6 +1092,19 @@ body {
   font-size: 12px;
 }
 
+.process-content {
+  width: 100%;
+  background-color: #f4f4f4;
+}
+
+.process-detail {
+  display: none;
+}
+
+.process-detail.active {
+  display: block;
+}
+
 
 
 @media (max-width: 1000px) {
