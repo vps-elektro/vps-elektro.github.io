@@ -901,6 +901,7 @@ body {
   margin: 10px 0 10px 0;
   padding: 30px 60px;
   box-sizing: border-box;
+  position: sticky;
 
   background: linear-gradient(
     to right, 
@@ -1003,6 +1004,7 @@ body {
 }
 
 .process-navigation {
+  position: sticky;
   display: grid;
   grid-template-columns: repeat(9, minmax(0,1fr));
   gap: 15px;
@@ -1071,6 +1073,21 @@ body {
 
 .process-item.active span {
   color: white;
+}
+
+.process-navigation.sticky-mode .process-item {
+  aspect-ratio: auto;
+  height: 140px;
+}
+
+.process-navigation.sticky-mode .process-item img  {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+}
+
+.process-navigation.sticky-mode .process-item span  {
+  font-size: 12px;
 }
 
 
