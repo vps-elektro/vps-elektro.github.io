@@ -898,7 +898,7 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
-  margin: 10px 0 10px 0;
+  margin: 0 0 10px 0;
   padding: 10px 30px;
   box-sizing: border-box;
   position: sticky;
