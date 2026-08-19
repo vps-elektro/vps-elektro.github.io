@@ -1113,6 +1113,12 @@ body {
   display: none;
 }
 
+.process-detail h2 {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 32px;
+  color: #1e532f;
+}
+
 .process-detail.active {
   display: block;
 }
