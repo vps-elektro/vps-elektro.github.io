@@ -1017,15 +1017,19 @@ body {
 
 .process-navigation {
   z-index: 900;
-  
+  width: 100%;
+  background-color: white;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+.process-navigation-inner {
   display: grid;
-  grid-template-columns: repeat(10, 1fr));
+  grid-template-columns: repeat(10, 1fr);
   gap: 15px;
 
-  width: 100%;
+  width: 92%;
   margin: 0 auto;
-
-  background-color: white;
 }
 
 .process-item {
