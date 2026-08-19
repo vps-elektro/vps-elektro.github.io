@@ -55,7 +55,7 @@ body {
   }
 
   .logo-link {
-    padding: 15px 25px !important;
+    padding: 10px 15px !important;
   }
 
   .logo-link:hover {
@@ -64,7 +64,7 @@ body {
 
   .logo {
     display: block;
-    height: 80px;
+    height: 70px;
     width: auto;
   }
 
