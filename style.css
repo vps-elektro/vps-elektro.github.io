@@ -1019,7 +1019,7 @@ body {
   z-index: 900;
   
   display: grid;
-  grid-template-columns: repeat(10, minmax(0,1fr));
+  grid-template-columns: repeat(10, 1fr));
   gap: 15px;
 
   width: 100%;
