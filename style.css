@@ -902,7 +902,7 @@ body {
   padding: 10px 30px;
   box-sizing: border-box;
   position: sticky;
-  top: 170px;
+  top: 90px;
   z-index: 900;
 
   background: linear-gradient(
@@ -1017,7 +1017,7 @@ body {
 
 .process-navigation {
   position: sticky;
-  top: 240px;
+  top: 132px;
   z-index: 900;
   
   display: grid;
