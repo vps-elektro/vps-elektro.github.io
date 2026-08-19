@@ -1017,7 +1017,7 @@ body {
 
 .process-navigation {
   position: sticky;
-  top: 157px;
+  top: 177px;
   z-index: 900;
   
   display: grid;
