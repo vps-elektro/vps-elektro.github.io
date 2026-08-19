@@ -961,13 +961,13 @@ body {
 }
 
 .leader-image {
-  flex: 0 0 30%;
+  flex: 0 0 40%;
 }
 
 .leader-image img {
   display: block;
   width: 100%;
-  height: 320px;
+  height: 250px;
   object-fit: cover;
 }
 
