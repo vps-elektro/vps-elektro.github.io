@@ -1017,6 +1017,9 @@ body {
 
 .process-navigation {
   position: sticky;
+  top: 0;
+  z-index: 1000;
+  
   display: grid;
   grid-template-columns: repeat(10, minmax(0,1fr));
   gap: 15px;
