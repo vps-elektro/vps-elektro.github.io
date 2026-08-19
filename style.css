@@ -1031,7 +1031,7 @@ body {
 }
 
 .process-item {
-  width: 100%;
+  width: 80%;
   box-sizing: border-box;
   aspect-ratio: 1 / 1;
 
@@ -1092,7 +1092,6 @@ body {
 
 .process-navigation.sticky-mode .process-item {
   aspect-ratio: auto;
-  height: 140px;
 }
 
 .process-navigation.sticky-mode .process-item img  {
