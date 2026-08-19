@@ -937,7 +937,7 @@ body {
   width: 100%;
   background-color: #f4f4f4;
   margin: 25px 0 10px 0;
-  padding-top: 25px;
+  padding-top: 12px;
 } 
 
 .leader-section h2 {
@@ -954,7 +954,8 @@ body {
   align-items: center;
   gap: 30px;
 
-  width: 45%;
+  width: 40%;
+  max-width: 800px;
   margin: 0 auto;
   padding: 30px;
   background-color: white;
