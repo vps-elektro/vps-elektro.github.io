@@ -1107,7 +1107,6 @@ body {
 .process-content {
   width: 100%;
   background-color: #f4f4f4;
-  align-items: center;
 }
 
 .process-detail {
@@ -1123,7 +1122,7 @@ body {
   width: 80%;
   min-height: 420px;
 
-  margin-bottom: 30px;
+  margin-bottom: 0 auto 30px auto;
 
   background-color: white;
 }
