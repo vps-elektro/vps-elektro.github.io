@@ -1016,13 +1016,10 @@ body {
 }
 
 .process-navigation {
-  position: sticky;
-  top: 177px;
   z-index: 900;
   
   display: grid;
   grid-template-columns: repeat(10, minmax(0,1fr));
-  justify-content: center;
   gap: 15px;
 
   width: 100%;
@@ -1032,7 +1029,7 @@ body {
 }
 
 .process-item {
-  width: 80%;
+  width: 100%;
   box-sizing: border-box;
   aspect-ratio: 1 / 1;
 
@@ -1056,8 +1053,8 @@ body {
 .process-item img {
   display: block;
 
-  width: 80%;
-  height: 80%;
+  width: 85%;
+  height: 85%;
 
   object-fit: contain;
   margin-bottom: 10px;
@@ -1089,20 +1086,6 @@ body {
 
 .process-item.active span {
   color: white;
-}
-
-.process-navigation.sticky-mode .process-item {
-  aspect-ratio: auto;
-}
-
-.process-navigation.sticky-mode .process-item img  {
-  width: 85%;
-  height: 85%;
-  object-fit: contain;
-}
-
-.process-navigation.sticky-mode .process-item span  {
-  font-size: 12px;
 }
 
 /* Definice procesů */
