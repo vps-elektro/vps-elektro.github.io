@@ -1102,6 +1102,8 @@ body {
   font-size: 12px;
 }
 
+/* Definice procesů */
+
 .process-content {
   width: 100%;
   background-color: #f4f4f4;
@@ -1117,12 +1119,12 @@ body {
 
 .process-content-block {
   display: flex;
-  width: 100%;
+  width: 80%;
   min-height: 420px;
 
   margin-bottom: 30px;
 
-  background-color: #f4f4f4;
+  background-color: white;
 }
 
 .process-content-slider {
