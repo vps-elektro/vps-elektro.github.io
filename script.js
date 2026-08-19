@@ -150,24 +150,13 @@ showChevron(0);
 }
 
 const processItems = document.querySelectorAll(".process-item");
-const processNavigation = document.querySelector(".process-navigation");
 const processDetails = document.querySelectorAll(".process-detail");
-const processSection = document.querySelector(".process-section");
 
 processItems.forEach(function(item){
                     item.addEventListener("click", function() {
 
-                      const isActive = item.classList.contains("active");
                       const processName = item.dataset.process;
                       const detail = document.getElementById(processName);
-
-                      if (isActive) {
-                        item.classList.remove("active");
-                        detail.classList.remove("active");
-                        processNavigation.classList.remove("sticky-mode");
-
-                        return;
-                      }
                       
                       processItems.forEach(function(otherItem) {
                         otherItem.classList.remove("active");
@@ -179,15 +168,9 @@ processItems.forEach(function(item){
                       
                       item.classList.add("active");
                       detail.classList.add("active");
-                      
-                      processNavigation.classList.add("sticky-mode");
-
-                      processSection.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start"
-                      });
                     });
                   });
+
 
 const departmentTitle = document.querySelector(".department-title");
 const departmentHeader = document.querySelector(".department-header");
