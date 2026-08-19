@@ -936,12 +936,12 @@ body {
 .leader-section {
   width: 100%;
   background-color: #f4f4f4;
-  margin: 10px 0 10px 0;
+  margin: 25px 0 10px 0;
 } 
 
 .leader-section h2 {
   font-family: "Trebuchet MS", Arial, sans-serif;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: normal;
 
   color: #1e532f;
