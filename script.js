@@ -224,8 +224,43 @@ photoSliders.forEach(function(slider) {
 
   function showPhotoSlide(index) {
 
-    if (index)
+    if (index >= slides.length) {
+      currentPhotoSlide = 0; 
+    }
+
+    else if (index < 0) {
+      currentPhotoSlide = slides.length - 1;
+    }
+
+    else {
+      currentPhotoSlide = index;
+    }
+
+    slides.forEach(function(slide) {
+      slide.classList.remove("active");
+    });
+
+    dots.forEach(function(dot) {
+      dot.classList.remove("active");
+    });
+
+    slides[currentPhotoSlide].classList.add("active");
+    dots[currentPhotoSlide].classList.add("active");
     
   }
+
+  nextButton.addEventListener("click", function() {
+    showPhotoSlide(currentPhotoSlide + 1);
+  });
+
+  prevButton.addEventListener("click", function() {
+    showPhotoSlide(currentPhotoSlide - 1);
+  });
+
+  dots.forEach(function(dot, index) {
+    dot.addEventListener("click", function() {
+      showPhotoSlide(index);
+    });
+  });
   
 });
