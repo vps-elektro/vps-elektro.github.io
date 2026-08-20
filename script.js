@@ -173,7 +173,7 @@ processItems.forEach(function(item){
 
 
 const departmentTitle = document.querySelector(".department-title");
-const processNavigation = document.getElementByID(".process-navigation");
+const processNavigation = document.getElementById(".process-navigation");
 
 departmentTitle.addEventListener("click", function() {
     processNavigation.scrollIntoView({
