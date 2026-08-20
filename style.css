@@ -934,8 +934,11 @@ body {
 }
 
 .department-separator {
-  margin: 0 10px;
-  opacity: 0.7;
+  margin: 0 5px;
+  font-size: 16px;
+  font-weight: bold;
+  opacity: 1;
+  color: white;
 }
 
 #department-current {
