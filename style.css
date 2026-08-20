@@ -933,6 +933,15 @@ body {
   text-decoration: underline;
 }
 
+.department-separator {
+  margin: 0 10px;
+  opacity: 0.7;
+}
+
+#department-current {
+  font-weight: normal;
+}
+
 .leader-section {
   width: 100%;
   background-color: #f4f4f4;
