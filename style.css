@@ -225,7 +225,7 @@ body {
     align-items: center;
     gap: 20px;
 
-    width: 95%;
+    width: 98%;
     min-height: 100px;
     margin: 20px auto;
 
@@ -234,7 +234,7 @@ body {
   }
 
   .reasons-block-image {
-    width: 25%;
+    width: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
