@@ -1119,8 +1119,8 @@ body {
 
 .process-content-block {
   display: flex;
-  width: 80%;
-  min-height: 420px;
+  width: 70%;
+  min-height: 320px;
 
   margin: 0 auto 30px auto;
 
@@ -1157,7 +1157,7 @@ body {
   color: #222;
 
   font-family: "Trebuchet MS", Arial, sans-serif;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 1.7;
 }
 
