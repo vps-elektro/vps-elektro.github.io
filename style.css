@@ -226,7 +226,7 @@ body {
     gap: 20px;
 
     width: 90%;
-    height: 90px;
+    min-height: 140px;
     margin: 20px auto;
 
     box-sizing: border-box;
@@ -238,12 +238,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
   }
 
   .reasons-block-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    display: block;
   }
 
   .reasons-block-text {
