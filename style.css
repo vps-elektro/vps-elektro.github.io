@@ -225,7 +225,8 @@ body {
     align-items: center;
     gap: 20px;
 
-    width: 80%;
+    width: 90%;
+    height: 90px;
     margin: 20px auto;
 
     box-sizing: border-box;
