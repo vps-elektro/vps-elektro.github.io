@@ -277,61 +277,71 @@ const processOrderPCB = [
   "expedice"
 ];
 
-const processPrev = document.querySelectorAll(".process-prev");
-const processTop = document.querySelectorAll(".process-top");
-const processNext = document.querySelectorAll(".process-next");
+const processPrevButtons = document.querySelectorAll(".process-prev");
+const processTopButtons = document.querySelectorAll(".process-top");
+const processNextButtons = document.querySelectorAll(".process-next");
 
 function updateBottomNavigation(currentProcess) {
   const currentIndex = processOrderPCB.indexOf(currentProcess);
   const previousProcess = processOrderPCB[currentIndex - 1];
   const nextProcess = processOrderPCB[currentIndex + 1];
 
-if (previousProcess) {
-  processPrev.style.visibility = "visible";
+processPrevButtons.forEach(function(button) {
 
-  processPrev.textContent = "← Předchozí (" + processNamesPCB[previousProcess] + ")";
+  if (previousProcess) {
+    button.style.visibility = "visible";
 
-  processPrev.dataset.process = previousProcess;
-} else {
+    button.textContent = "← Předchozí (" + processNamesPCB[previousProcess] + ")";
 
-  processPrev.style.visibility = "hidden";
+    button.dataset.process = previousProcess;
+  } else {
 
-}
-  
-if (nextProcess) {
-  processNext.style.visibility = "visible";
+    button.style.visibility = "hidden";
 
-  processNext.textContent = "Další (" + processNamesPCB[nextProcess] + ") →";
-
-  processNext.dataset.process = nextProcess;
-} else {
-
-  processNext.style.visibility = "hidden";
-  
-}
-  
-}
-
-processPrev.addEventListener("click", function() {
-  const process = this.dataset.process;
-
-  document
-    .querySelector(`.process-item[data-process="${process}"]`)
-    .click();
+  }
 });
 
-processNext.addEventListener("click", function() {
-  const process = this.dataset.process;
+processNextButtons.forEach(function(button) {
+  if (nextProcess) {
+    button.style.visibility = "visible";
 
-  document
-    .querySelector(`.process-item[data-process="${process}"]`)
-    .click();
+    button.textContent = "Další (" + processNamesPCB[nextProcess] + ") →";
+
+    button.dataset.process = nextProcess;
+  } else {
+
+    button.style.visibility = "hidden";
+  
+  }
 });
 
-processTop.addEventListener("click", function() {
-  processNavigation.scrollIntoView({
-    behavior: "smooth",
-    block: "start"
+processPrevButtons.forEach(function(button) {
+
+  button.addEventListener("click", function() {
+    const process = this.dataset.process;
+
+    document
+      .querySelector(`.process-item[data-process="${process}"]`)
+      .click();
+  });
+});
+
+processNextButtons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    const process = this.dataset.process;
+
+    document
+      .querySelector(`.process-item[data-process="${process}"]`)
+      .click();
+  });
+});
+
+processTopButtons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    processNavigation.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
   });
 });
 
