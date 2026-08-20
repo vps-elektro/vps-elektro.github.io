@@ -251,7 +251,7 @@ const processNamesPCB = {
   kontrola: "Kontrola",
   lakovani: "Lakování",
   expedice: "Expedice"
-}
+};
 
 document.querySelectorAll(".process-item").forEach(function(item) {
   item.addEventListener("click", function() {
