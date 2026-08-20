@@ -334,3 +334,5 @@ processTop.addEventListener("click", function() {
     block: "start"
   });
 });
+
+updateBottomNavigation("data");
