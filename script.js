@@ -258,5 +258,79 @@ document.querySelectorAll(".process-item").forEach(function(item) {
     const process = this.dataset.process;
 
     departmentCurrentPCB.textContent = processNamesPCB[process];
+
+    updateBottomNavigation(process);
+  });
+});
+
+
+const processOrderPCB = [
+  "data",
+  "material",
+  "pasta",
+  "smt",
+  "reflow",
+  "tht",
+  "myti",
+  "kontrola",
+  "lakovani",
+  "expedice"
+];
+
+const processPrev = document.getElementById("process-prev");
+const processTop = document.getElementById("process-top");
+const processNext = document.getElementById("process-next");
+
+function updateBottomNavigation(currentProcess) {
+  const currentIndex = processOrderPCB.indexOf(currentProcess);
+  const previousProcess = processOrderPCB[currentIndex - 1];
+  const nextProcess = processOrderPCB[currentIndex + 1];
+
+if (previousProcess) {
+  processPrev.style.visibility = "visible";
+
+  processPrev.textContent = "← Předchozí (" + processNamesPCB[previousProcess] + ")";
+
+  processPrev.dataset.process = previousProcess;
+} else {
+
+  processPrev.style.visibility = "hidden";
+
+}
+  
+if (nextProcess) {
+  processNext.style.visibility = "visible";
+
+  processNext.textContent = "Další (" + processNamesPCB[nextProcess] + ") →";
+
+  processNext.dataset.process = nextProcess;
+} else {
+
+  processNext.style.visibility = "hidden";
+  
+}
+  
+}
+
+processPrev.addEventListener("click", function() {
+  const process = this.dataset.process;
+
+  document
+    .querySelector(`.process-item[data-process="${process}"]`)
+    .click();
+});
+
+processNext.addEventListener("click", function() {
+  const process = this.dataset.process;
+
+  document
+    .querySelector(`.process-item[data-process="${process}"]`)
+    .click();
+});
+
+processTop.addEventListener("click", function() {
+  processNavigation.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
   });
 });
