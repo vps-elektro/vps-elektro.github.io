@@ -277,9 +277,9 @@ const processOrderPCB = [
   "expedice"
 ];
 
-const processPrev = document.getElementById("process-prev");
-const processTop = document.getElementById("process-top");
-const processNext = document.getElementById("process-next");
+const processPrev = document.querySelectorAll(".process-prev");
+const processTop = document.querySelectorAll(".process-top");
+const processNext = document.querySelectorAll(".process-next");
 
 function updateBottomNavigation(currentProcess) {
   const currentIndex = processOrderPCB.indexOf(currentProcess);
