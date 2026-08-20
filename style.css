@@ -243,6 +243,7 @@ body {
   .reasons-block-image img {
     width: 100%;
     height: 100%;
+    object-fit: contain;
   }
 
   .reasons-block-text {
