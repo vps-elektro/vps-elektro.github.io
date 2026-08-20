@@ -247,3 +247,27 @@ photoSliders.forEach(function(slider) {
   });
   
 });
+
+
+const departmentCurrentPCB = document.getElementById("department-current");
+
+const processNamesPCB = {
+  data: "Data",
+  materiál: "Materiál",
+  pasta: "Pasta",
+  smt: "SMT",
+  reflow: "Reflow",
+  tht: "THT",
+  myti: "Mytí",
+  kontrola: "Kontrola",
+  lakovani: "Lakování",
+  expedice: "Expedice"
+}
+
+document.querySelectorAll(".process-item").forEach(function(item) {
+  item.addEventListener("click", function() {
+    const process = this.dataset.process;
+
+    departmentCurrentPCB.textContent = processNamesPCB[process];
+  });
+});
