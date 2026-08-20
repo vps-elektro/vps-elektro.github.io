@@ -253,7 +253,7 @@ const departmentCurrentPCB = document.getElementById("department-current");
 
 const processNamesPCB = {
   data: "Data",
-  materiál: "Materiál",
+  material: "Materiál",
   pasta: "Pasta",
   smt: "SMT",
   reflow: "Reflow",
