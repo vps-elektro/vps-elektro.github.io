@@ -216,7 +216,7 @@ body {
   .reasons h1 {
     text-align: center;
     font-family: "Trebuchet MS", Arial, sans-serif;
-    font-size: 28px;
+    font-size: 22px;
     color: #1e532f;
   }
 
@@ -226,7 +226,7 @@ body {
     gap: 20px;
 
     width: 90%;
-    min-height: 140px;
+    min-height: 100px;
     margin: 20px auto;
 
     box-sizing: border-box;
@@ -254,13 +254,13 @@ body {
 
   .reasons-block-text h2 {
     font-family: "Trebuchet MS", Arial, sans-serif;
-    font-size: 28px;
+    font-size: 20px;
     color: #1e532f;
   }
 
   .reasons-block-text p {
     font-family: "Trebuchet MS", Arial, sans-serif;
-    font-size: 17px;
+    font-size: 14px;
     line-height: 1.6;
     color: #111;
   }
