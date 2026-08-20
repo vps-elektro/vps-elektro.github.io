@@ -239,6 +239,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    padding: 10px 10px;
   }
 
   .reasons-block-image img {
@@ -250,6 +251,7 @@ body {
 
   .reasons-block-text {
     flex: 1;
+    padding: 10px 10px;
   }
 
   .reasons-block-text h2 {
