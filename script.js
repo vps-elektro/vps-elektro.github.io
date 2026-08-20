@@ -173,25 +173,14 @@ processItems.forEach(function(item){
 
 
 const departmentTitle = document.querySelector(".department-title");
-const departmentHeader = document.querySelector(".department-header");
+const processNavigation = document.querySelector(".process-navigation");
 
 departmentTitle.addEventListener("click", function() {
-
-  processItems.forEach(function(item) {
-    item.classList.remove("active");
-  });
-
-  processDetails.forEach(function(detail) {
-    detail.classList.remove("active");
-  });
-
-  processNavigation.classList.remove("sticky-mode");
-
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });  
-});
+    processNavigation.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+});  
 
 
 const photoSliders = document.querySelectorAll(".photo-slider");
