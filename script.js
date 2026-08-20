@@ -314,6 +314,7 @@ processNextButtons.forEach(function(button) {
   
   }
 });
+}
 
 processPrevButtons.forEach(function(button) {
 
