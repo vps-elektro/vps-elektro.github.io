@@ -1419,7 +1419,7 @@ body {
 }
 
 .contact-card-image {
-  width: 30%;
+  width: 35%;
   flex-shrink: 0;
   overflow: hidden;
 }
@@ -1470,7 +1470,7 @@ body {
   text-decoration: underline;
 }
 
-.contats-section .contact-card:last-child:nth-child(even) {
+.contacts-section .contact-card:last-child:nth-child(even) {
   grid-column: 1/-1;
   width: calc(50% - 10px);
   justify-self: center;
