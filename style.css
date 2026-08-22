@@ -1374,6 +1374,74 @@ body {
 
 /* Kontakty */
 
+.contacts-general {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+
+  width: 80%;
+  margin: 0 auto;
+  padding: 25px 25px;
+
+  box-sizing: border-box;
+}
+
+.contacts-general-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-width: 0;
+
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  color: #111;
+}
+
+.contacts-general-text-company-block {
+  margin-bottom: 20px;
+}
+
+.contacts-general-text-company-block:last-child {
+  margin-bottom: 0;
+}
+
+.contacts-general-text h1 {
+  margin: 0 0 1px 0;
+  font-size: 26px;
+  font-weight: normal ;
+  color: #1e532f;
+}
+
+.contacts-general-text p {
+  margin: 0 0 1px 0;
+  font-size: 22px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.contacts-general-map {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.contacts-general-map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 330px;
+  border: 0;
+}
+
+.contacts-general-text a {
+  color: #111;
+  text-decoration: none;
+}
+
+contacts-generaů-text a:hover {
+  text-decoration: underline;
+}
+
 .contacts-page {
   padding-top: 30px;
   margin-bottom: 20px;
