@@ -1435,7 +1435,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-item: flex-start;
+  align-items: flex-start;
 
   flex: 1;
 
@@ -1447,11 +1447,13 @@ body {
 }
 
 .contact-card-text h3 {
+  margin: 0 0 4px 0
   font-size: 20px;
   color: #1e532f;
 }
 
 .contact-card-text p {
+  margin: 0 0 2px 0;
   font-size: 17px;
   color: #111;
   line-height: 1.2;
