@@ -1434,7 +1434,7 @@ body {
 .contact-card-text {
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  justify-content: flex-start;
 
   flex: 1;
 
