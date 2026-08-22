@@ -1423,7 +1423,7 @@ body {
 }
 
 .contacts-general-map {
-  width: 100%;
+  min-width: 0;
   min-width: 0;
   overflow: hidden;
 }
