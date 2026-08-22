@@ -1389,10 +1389,18 @@ body {
 .contacts-section-header {
   grid-column: 1/-1;
   width: 100%;
-  padding: 5px 5px;
+  padding: 8px 20px;
 
   box-sizing: border-box;
   background-color: #1e532f;
+
+  background: linear-gradient(
+    90deg, 
+    #1e532f 0%,
+    rgba(30, 83, 47, 0.85) 35%,
+    rgba(30, 83, 47, 0.25) 75%,
+    transparent 100%;
+  );
 }
 
 .contacts-section-header h2 {
@@ -1403,7 +1411,7 @@ body {
   font-weight: normal;
 
   color: white;
-  text-align: center;
+  text-align: left;
 }
 
 .contact-card {
@@ -1468,12 +1476,6 @@ body {
 
 .contact-card-text a:hover {
   text-decoration: underline;
-}
-
-.contacts-section .contact-card:last-child:nth-child(even) {
-  grid-column: 1/-1;
-  width: calc(50% - 10px);
-  justify-self: center;
 }
 
 @media (max-width: 1000px) {
