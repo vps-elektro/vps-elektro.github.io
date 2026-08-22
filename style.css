@@ -1381,7 +1381,7 @@ body {
 
   width: 80%;
   margin: 0 auto;
-  padding: 25px 0px;
+  padding: 0px;
 
   box-sizing: border-box;
 
@@ -1409,14 +1409,14 @@ body {
 
 .contacts-general-text h1 {
   margin: 0 0 5px 0;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: normal ;
   color: #1e532f;
 }
 
 .contacts-general-text p {
   margin: 0 0 5px 0;
-  font-size: 22px;
+  font-size: 17px;
   font-weight: normal;
   line-height: 1.2;
 }
