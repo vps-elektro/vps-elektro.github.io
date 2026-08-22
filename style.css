@@ -1380,7 +1380,7 @@ body {
   gap: 10px 20px;
 
   width: 80%;
-  padding: 30px 60px;
+  padding: 10px 60px 10px;
   margin: 0 auto;
 
   box-sizing: border-box;
@@ -1397,8 +1397,8 @@ body {
   background: linear-gradient(
     90deg, 
     #1e532f 0%,
-    rgba(30, 83, 47, 0.85) 35%,
-    rgba(30, 83, 47, 0.25) 75%,
+    rgba(30, 83, 47, 0.85) 30%,
+    rgba(30, 83, 47, 0.25) 60%,
     transparent 100%
   );
 }
@@ -1442,7 +1442,7 @@ body {
 .contact-card-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
 
   flex: 1;
