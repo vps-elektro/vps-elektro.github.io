@@ -1419,7 +1419,7 @@ body {
 }
 
 .contact-card-image {
-  width: 35%;
+  width: 30%;
   flex-shrink: 0;
   overflow: hidden;
 }
@@ -1447,7 +1447,7 @@ body {
 }
 
 .contact-card-text h3 {
-  margin: 0 0 4px 0
+  margin: 0 0 2px 0
   font-size: 20px;
   color: #1e532f;
 }
@@ -1468,6 +1468,12 @@ body {
 
 .contact-card-text a:hover {
   text-decoration: underline;
+}
+
+.contats-section .contact-card:last-child:nth-child(even) {
+  grid-column: 1/-1;
+  width: calc(50% - 10px);
+  justify-self: center;
 }
 
 @media (max-width: 1000px) {
