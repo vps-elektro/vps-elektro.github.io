@@ -1374,6 +1374,11 @@ body {
 
 /* Kontakty */
 
+.contacts-page {
+  padding-top: 50px;
+  margin-bottom: 20px;
+}
+
 .contacts-general {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1443,11 +1448,6 @@ map-container.contacts-general-map iframe {
 
 .contacts-general-text a:hover {
   text-decoration: underline;
-}
-
-.contacts-page {
-  padding-top: 30px;
-  margin-bottom: 20px;
 }
 
 .contacts-section {
