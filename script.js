@@ -175,6 +175,8 @@ processItems.forEach(function(item){
 const departmentTitle = document.querySelector(".department-title");
 const processNavigation = document.getElementById("process-navigation");
 
+if (departmentTitle && processNavigation) {
+
 departmentTitle.addEventListener("click", function() {
     processNavigation.scrollIntoView({
       behavior: "smooth",
@@ -182,6 +184,7 @@ departmentTitle.addEventListener("click", function() {
     });
 });  
 
+}
 
 const photoSliders = document.querySelectorAll(".photo-slider");
 
