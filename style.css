@@ -1215,6 +1215,10 @@ body {
   justify-content: center;
 }
 
+.case-study {
+  background-color: #f2f8f4;
+}
+
 .process-content-text h3 {
   margin: 0 0 10px 0;
 
