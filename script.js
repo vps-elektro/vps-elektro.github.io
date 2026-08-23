@@ -347,3 +347,23 @@ processTopButtons.forEach(function(button) {
 });
 
 updateBottomNavigation("data");
+
+const careerBlocks = document.querySelectorAll(".career-content-block");
+
+careerBlocks.forEach(function(block) {
+
+  const moreButton = block.querySelector(".more");
+  const lessButton = block.querySelector(".less");
+
+  if (moreButton && lessButton) {
+
+    moreButton.addEventListener("click", function() {
+      block.classList.add("open");
+    });
+
+    lessButton.addEventListener("click", function() {
+      block.classList.remove("open");
+    });
+  }
+  
+});
