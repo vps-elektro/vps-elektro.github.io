@@ -1666,6 +1666,65 @@ map-container.contacts-general-map iframe {
   opacity: 0;
 }
 
+.career-btns {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-top: 18px;
+}
+
+.career-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 8px 18px;
+  box-sizing: border-box;
+  border: 2px solid #1e532f;
+  border-radius: 6px;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.career-btn-secondary {
+  background-color: white;
+  color: #1e532f;
+}
+
+.career-btn-secondary:hover {
+  background-color: #1e532f;
+  color: white;
+}
+
+.career-btn-primary {
+  background-color: #1e532f;
+  color: white;
+}
+
+.career-btn-primary:hover {
+  text-decoration: underline;
+}
+
+.less {
+  display: none;
+}
+
+.career-content-block.open .more {
+  display: none;
+}
+
+.career-content-block.open .less {
+  display: inline-flex;
+}
+
 @media (max-width: 1000px) {
 
   .navigation {
