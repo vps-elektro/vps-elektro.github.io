@@ -1557,6 +1557,7 @@ map-container.contacts-general-map iframe {
 /* Kariéra */
 
 .careers-page {
+  padding-top: 50px; 
   width: 100%;
   background-color: #f4f4f4;
 }
