@@ -1557,7 +1557,7 @@ map-container.contacts-general-map iframe {
 /* Kariéra */
 
 .careers-page {
-  widht: 100%;
+  width: 100%;
   background-color: #f4f4f4;
 }
 
@@ -1573,15 +1573,98 @@ map-container.contacts-general-map iframe {
 
 .career-content-block {
   display: flex;
-  widht: 80%;
-  align-items: stretch;
+  width: 80%;
+  align-items: flex-start;
   gap: 25px;
   margin: 0 auto 25px;
   box-sizing: border-box;
   background-color: white;
 }
 
-.career-content-
+.career-content-image {
+  width: 35%;
+  min-width: 0;
+  height: 330px;
+  
+  overflow: hidden;
+
+  flex-shrink: 0;
+}
+
+.career-content-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+  
+  object-fit: cover;
+}
+
+.career-content-text {
+  flex: 1;
+  min-width: 0px;
+
+  display: flex;
+  flex-direction: column;
+  padding: 25px 35px 25px 15px;
+
+  box-sizing: border-box;
+}
+
+.career-content-text h2 {
+  margin: 0 0 15px;
+
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 24px;
+  color: #1e532f;
+}
+
+.career-content-block p {
+  margin: 0 0 10px;
+
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #111;
+}
+
+.career-preview {
+  position: relative;
+
+  max-height: 120px;
+  overflow: hidden;
+
+  transition: max-height 0.45s ease;
+}
+
+.career-preview::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 45px;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    to bottom, 
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1)
+  );
+
+  transition: opacity 0.25s ease;
+}
+
+.career-content-block.open .career-preview {
+  max-height: 1000px;
+}
+
+.career-content-block.open .career-preview::after {
+  opacity: 0;
+}
 
 @media (max-width: 1000px) {
 
