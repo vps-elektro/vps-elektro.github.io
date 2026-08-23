@@ -1670,6 +1670,7 @@ map-container.contacts-general-map iframe {
 .career-btns {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
 
