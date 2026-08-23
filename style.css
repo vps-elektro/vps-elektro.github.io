@@ -1556,7 +1556,32 @@ map-container.contacts-general-map iframe {
 
 /* Kariéra */
 
-.
+.careers-page {
+  widht: 100%;
+  background-color: #f4f4f4;
+}
+
+.careers-page > h1{
+  margin: 0 0 25px;
+
+  text-align: center;
+
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 26px;
+  color: #1e532f;
+}
+
+.career-content-block {
+  display: flex;
+  widht: 80%;
+  align-items: stretch;
+  gap: 25px;
+  margin: 0 auto 25px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.career-content-
 
 @media (max-width: 1000px) {
 
