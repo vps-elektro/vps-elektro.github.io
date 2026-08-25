@@ -297,8 +297,8 @@ body {
     justify-content: center;
     align-items: center;
 
-    width: 300px;
-    height: 400px;
+    width: 350px;
+    height: 450px;
   }
 
   .certification-image {
@@ -364,15 +364,15 @@ body {
   .iso-9001 {
     top: 85%;
     left: 18%;
-    width: 28%;
-    height: 12%;
+    width: 35%;
+    height: 15%;
   }
 
   .iso-14001 {
     top: 85%;
     right: 18%;
-    width: 28%;
-    height: 12%;
+    width: 35%;
+    height: 15%;
   }
 
   .iso-content {
@@ -391,7 +391,7 @@ body {
   }
 
   .iso-card:hover .iso-content {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
   .menu-toggle {
