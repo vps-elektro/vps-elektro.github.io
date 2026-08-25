@@ -458,7 +458,7 @@ body {
   .map-section {
     padding: 0;
     background-color: #f4f4f4;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 
   .map-section h2 {
@@ -467,7 +467,7 @@ body {
     color: #1e532f;
 
     font-family: "Trebuchet MS", Arial, sans-serif;
-    font-size: 32px;
+    font-size: 26px;
   }
 
   .map-container {
