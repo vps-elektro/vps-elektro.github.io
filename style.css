@@ -121,6 +121,8 @@ body {
     margin: 0 0 15px;
     font-family: "Trebuchet MS", Arial, sans-serif;
     font-size: 46px;
+
+    margin-bottom: 5px;
   }
 
   .slide-text p {
