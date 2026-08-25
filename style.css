@@ -203,12 +203,6 @@ body {
     background-color: #1e532f;
   }
 
-  .certification-section {
-    width: 100%;
-    padding: 70px 0;
-    background-color: #f4f4f4;
-  }
-
   .reasons {
     width: 100%;
     padding: 20px 60px;
@@ -221,6 +215,7 @@ body {
     font-family: "Trebuchet MS", Arial, sans-serif;
     font-size: 24px;
     color: #1e532f;
+    margin-bottom: 10px;
   }
 
   .reasons-block {
@@ -270,24 +265,28 @@ body {
     color: #111;
   }
 
+  .certification-section {
+    width: 100%;
+    background-color: #f4f4f4;
+  }
+
   .certification-head {
     text-align: center;
-    margin-top:10px;
+    margin-top: 0;
     margin-bottom: 10px;
   }
 
   .certification-head h2 {
     font-family: "Trebuchet MS", Arial, sans-serif;
-    font-size: 40px;
+    font-size: 26px;
     color: #1e532f;
-    margin-bottom: 10px;
   }
 
   .certification-cards {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 80px;
+    gap: 40px;
     width: 80%;
     margin: 0 auto;
   }
