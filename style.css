@@ -252,7 +252,7 @@ body {
 
   .reasons-block-text {
     flex: 1;
-    padding: 10px 10px;
+    padding: 5px 5px;
   }
 
   .reasons-block-text h2 {
@@ -264,7 +264,7 @@ body {
   .reasons-block-text p {
     font-family: "Trebuchet MS", Arial, sans-serif;
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.2;
     color: #111;
   }
 
