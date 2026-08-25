@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+h1, h2, h3, p {
+  margin: 0;
+}
+
 /* nastavení těla */
 body {
   margin: 0;
