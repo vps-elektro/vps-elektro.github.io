@@ -1169,6 +1169,7 @@ body {
 
 .actualities-intro p {
   margin-bottom: 0px;
+  font-weight: bold;
 }
 
 .actualities-preview {
@@ -2317,6 +2318,13 @@ map-container.contacts-general-map iframe {
   font-size: 17px;
   color: #111;
   line-height: 1.2;
+}
+
+.contact-card-text .function {
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+  font-weight: bold;
 }
 
 .contact-card-text a {
