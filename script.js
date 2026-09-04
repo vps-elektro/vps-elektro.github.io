@@ -327,6 +327,12 @@ processPrevButtons.forEach(function(button) {
     document
       .querySelector(`.process-item[data-process="${process}"]`)
       .click();
+
+    
+    processNavigation.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
   });
 });
 
@@ -337,6 +343,11 @@ processNextButtons.forEach(function(button) {
     document
       .querySelector(`.process-item[data-process="${process}"]`)
       .click();
+
+    processNavigation.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
   });
 });
 
@@ -370,3 +381,482 @@ careerBlocks.forEach(function(block) {
   }
   
 });
+
+
+const actualityBlocks = document.querySelectorAll(".actualities-content-block");
+const overlay = document.querySelector(".actualities-overlay");
+
+actualityBlocks.forEach(function(block) {
+
+  const preview = block.querySelector(".actualities-preview");
+  const moreBtn = block.querySelector(".more");
+  const lessBtn = block.querySelector(".less");
+  const galleryBtn = block.querySelector(".gallery-open");
+  const actualityLink = block.querySelector(".actuality-link");
+
+  moreBtn.addEventListener("click", function() {
+    preview.classList.add("actualities-preview-expanded");
+    
+    block.classList.add("focused");
+    overlay.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+
+    moreBtn.style.display = "none";
+    lessBtn.style.display = "inline-flex";
+
+    if (galleryBtn) {
+      galleryBtn.style.display = "inline-flex";
+    }
+
+    if (actualityLink) {
+      actualityLink.style.display = "inline-flex";
+    }
+
+  setTimeout(function() {
+    const blockRect = block.getBoundingClientRect();
+
+    const blockCenter = 
+      window.scrollY +
+      blockRect.top + 
+      (blockRect.height / 2);
+
+    const viewportCenter = 
+      window.innerHeight / 2;
+    
+    const targetScroll = 
+      blockCenter - viewportCenter - 30;
+
+    window.scrollTo({
+      top: targetScroll,
+      behavior: "smooth"
+    });
+  }, 100);
+
+  });
+
+  lessBtn.addEventListener("click", function() {
+    preview.classList.remove("actualities-preview-expanded");
+
+    block.classList.remove("focused");
+    overlay.classList.remove("active");
+
+    document.body.style.overflow = "";
+
+    lessBtn.style.display = "none";
+    moreBtn.style.display = "inline-flex";
+
+    if (galleryBtn) {
+      galleryBtn.style.display = "none";
+    }
+
+    if (actualityLink) {
+      actualityLink.style.display = "none";
+    }
+
+  });
+
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const hash = window.location.hash.substring(1);
+
+  let process = hash || "data";
+
+  const processItem = document.querySelector(`.process-item[data-process="${process}"]`);
+
+  if (processItem) {
+    processItem.click();
+  }
+});
+
+
+const galleryOpenButtons = document.querySelectorAll(".gallery-open");
+const galleryLightbox = document.querySelector(".gallery-lightbox");
+const galleryImage = document.querySelector(".gallery-image");
+const galleryClose = document.querySelector(".gallery-close");
+const galleryPrev = document.querySelector(".gallery-prev");
+const galleryNext = document.querySelector(".gallery-next");
+const galleryCounter = document.querySelector(".gallery-counter");
+
+if (
+  galleryLightbox &&
+  galleryImage &&
+  galleryClose &&
+  galleryPrev &&
+  galleryNext &&
+  galleryCounter
+) {
+
+  let galleryImages = [];
+  let currentGalleryImage = 0;
+
+  galleryOpenButtons.forEach(function(button) {
+    button.addEventListener("click", function() {
+        galleryImages = button.dataset.images
+          .split(",")
+          .map(function(image){
+            return image.trim();
+          });
+
+        currentGalleryImage = 0;
+
+        showGalleryImage();
+
+        galleryLightbox.classList.add("active");
+    });
+  });
+
+  function showGalleryImage() {
+    galleryImage.src = galleryImages[currentGalleryImage];
+
+    galleryCounter.textContent =
+      (currentGalleryImage + 1) + "/" + galleryImages.length;
+  }
+
+  galleryNext.addEventListener("click", function() {
+    currentGalleryImage++;
+    if (currentGalleryImage>=galleryImages.length) {
+      currentGalleryImage = 0;
+    }
+    showGalleryImage();
+  });
+
+  galleryPrev.addEventListener("click", function() {
+    currentGalleryImage--;
+
+    if (currentGalleryImage<0) {
+      currentGalleryImage = galleryImages.length - 1;
+    }
+    showGalleryImage();
+  });
+
+  galleryClose.addEventListener("click", function() {
+    galleryLightbox.classList.remove("active");
+  });
+
+}
+
+
+const actualityItems = document.querySelectorAll(".actualities-content-block");
+
+const actualitiesPerPage = 5;
+
+let currentActualityPage = 1;
+
+const pagination = document.querySelector(".actualities-pagination")
+
+function showActualityPage(page) {
+  currentActualityPage = page;
+
+  const start = (page - 1) * actualitiesPerPage;
+  const end = start + actualitiesPerPage;
+
+  actualityItems.forEach(function(item, index) {
+
+    if (index >= start && index < end) {
+      item.style.display = "flex";
+    } else {
+      item.style.display = "none";
+    }
+  });
+
+  createPagination()
+
+}
+
+function createPagination() {
+  pagination.innerHTML = "";
+
+  const totalPages = Math.ceil(actualityItems.length / actualitiesPerPage);
+
+  const visiblePages = 5;
+
+  let startPage = currentActualityPage - Math.floor(visiblePages / 2);
+  let endPage = currentActualityPage + Math.floor(visiblePages / 2);
+
+  const footer = document.querySelector(".footer")
+
+  if (totalPages <= 1) {
+    pagination.style.display = "none";
+    footer.classList.add("actualities")
+    return;
+  }
+
+  if (startPage < 1) {
+    startPage = 1;
+    endPage = Math.min(visiblePages, totalPages);
+  }
+
+  if (endPage > totalPages) {
+    endPage = totalPages;
+    startPage = Math.max(1, totalPages - visiblePages + 1);
+  }
+
+  for (let i = startPage; i <= endPage; i++) {
+    const button = document.createElement("button");
+
+    button.textContent = i;
+
+    button.classList.add("pagination-btn");
+
+    if (i === currentActualityPage) {
+      button.classList.add("active");
+    }
+
+    button.addEventListener("click", function(){
+      showActualityPage(i);
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+
+    pagination.appendChild(button);
+  }
+}
+
+if (pagination && actualityItems.length > 0) {showActualityPage(1);}
+
+
+const homeActualitiesContent = document.getElementById("home-actualities-content");
+
+if (homeActualitiesContent) {
+
+  fetch("aktuality.html").then(function(response) {
+    return response.text();
+  }).then(function(html) {
+
+    const parser = new DOMParser();
+
+    const actualitiesDocument = parser.parseFromString(html, "text/html");
+
+    const actualityBlocks = actualitiesDocument.querySelectorAll(".actualities-content-block");
+
+    const latestActualities = Array.from(actualityBlocks).slice(0, 3);
+
+    latestActualities.forEach(function(actuality, index) {
+
+        const image = actuality.querySelector(".actualities-content-image img");
+
+        const title = actuality.querySelector(".actualities-content-text-header h2");
+
+        if (!image || !title) {
+          return;
+        }
+
+        const card = document.createElement("div");
+        card.classList.add("home-actuality-card");
+
+        const cardImage = document.createElement("img");
+        cardImage.src = image.getAttribute("src");
+        cardImage.alt = image.getAttribute("alt") || "";
+
+        const cardTitle = document.createElement("h3");
+
+        const cardLink = document.createElement("a");
+        cardLink.textContent = title.textContent.trim();
+        cardLink.href = "aktuality.html?aktualita=" + index
+
+        cardTitle.appendChild(cardLink);
+
+        card.appendChild(cardImage);
+        card.appendChild(cardTitle);
+
+        homeActualitiesContent.appendChild(card);
+
+    });
+
+  });
+
+}
+
+const params = new URLSearchParams(window.location.search);
+const actualityIndex = params.get("aktualita");
+
+if (actualityIndex !== null) {
+
+  const actualityBlocks = document.querySelectorAll(".actualities-content-block");
+
+  const targetActuality = actualityBlocks[Number(actualityIndex)];
+
+  if (targetActuality) {
+    const moreBtn = targetActuality.querySelector(".more");
+
+    if (moreBtn) {
+      moreBtn.click();
+    }
+  }
+}
+
+const productionVideo = document.getElementById("production-video");
+
+if (productionVideo) {
+
+  productionVideo.addEventListener("ended", function() { 
+    productionVideo.load();
+  });
+
+}
+
+const productBlocks = document.querySelectorAll(".our-product-block");
+const productOverlay = document.querySelector(".our-product-overlay");
+
+productBlocks.forEach(function(block) {
+
+  const preview = block.querySelector(".our-product-preview");
+  const moreBtn = block.querySelector(".more");
+  const lessBtn = block.querySelector(".less");
+
+  if (preview &&
+      moreBtn &&
+      lessBtn &&
+      productOverlay
+     ) {
+      moreBtn.addEventListener("click", function() {
+
+        preview.classList.add("our-product-preview-expanded");
+
+        block.classList.add("focused");
+        productOverlay.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+
+        moreBtn.style.display = "none";
+        lessBtn.style.display = "inline-flex";
+
+        setTimeout(function() {
+
+          const blockRect = block.getBoundingClientRect();
+
+          const blockCenter = 
+            window.scrollY +
+            blockRect.top +
+            (blockRect.height /2);
+
+          const viewportCenter =
+            window.innerHeight / 2;
+
+          const targetScroll = 
+            blockCenter - viewportCenter - 30;
+
+          window.scrollTo({
+            top: targetScroll,
+            behavior: "smooth"
+          });
+
+        }, 100);
+
+      });
+
+      lessBtn.addEventListener("click", function() {
+
+        preview.classList.remove("our-product-preview-expanded");
+
+        block.classList.remove("focused");
+        productOverlay.classList.remove("active");
+
+        document.body.style.overflow = "";
+
+        lessBtn.style.display = "none";
+        moreBtn.style.display = "inline-flex";
+
+      });
+
+     }
+
+});
+
+
+const productItems = document.querySelectorAll(".our-product-block");
+const productsPerPage = 5;
+let currentProductPage = 1;
+const productPagination = document.querySelector(".our-products-pagination");
+
+function showProductPage(page) {
+
+  currentProductPage = page;
+
+  const start = (page - 1) * productsPerPage;
+  const end = start + productsPerPage;
+
+  productItems.forEach(function(item, index) {
+
+    if (index >= start && index < end) {
+      item.style.display = "flex";
+    } else {
+      item.style.display = "none";
+    }
+
+  });
+
+  createProductPagination();
+
+}
+
+function createProductPagination() {
+
+  productPagination.innerHTML = "";
+
+  const totalPages = 
+    Math.ceil(productItems.length / productsPerPage);
+
+  const footer = document.querySelector(".footer")
+
+  if (totalPages <= 1) {
+    productPagination.style.display = "none";
+    footer.classList.add("actualities")
+    return;
+  }
+
+  const visiblePages = 5;
+
+  let startPage = 
+    currentProductPage - Math.floor(visiblePages / 2);
+
+  let endPage = 
+    currentProductPage + Math.floor(visiblePages / 2);
+
+  if (startPage < 1) {
+    startPage = 1;
+    endPage = Math.min(visiblePages, totalPages);
+  }
+
+  if (endPage > totalPages) {
+    endPage = totalPages;
+    startPage = Math.max(1, totalPages - visiblePages + 1);
+  }
+
+  for (let i = startPage; i <= endPage; i++) {
+
+    const button = document.createElement("button");
+
+    button.textContent = i;
+
+    button.classList.add("pagination-btn");
+
+    if (i === currentProductPage) {
+      button.classList.add("active");
+    }
+
+    button.addEventListener("click", function() {
+
+      showProductPage(i);
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    });
+
+    productPagination.appendChild(button);
+
+  }
+
+}
+
+if (productPagination && productItems.length > 0) {
+  showProductPage(1);
+}
