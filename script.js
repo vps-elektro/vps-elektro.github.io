@@ -241,7 +241,7 @@ photoSliders.forEach(function(slider) {
 });
 
 
-const departmentCurrentPCB = document.getElementById("department-current");
+const departmentCurrent = document.getElementById("department-current");
 
 const processNamesPCB = {
   data: "Data",
@@ -253,41 +253,79 @@ const processNamesPCB = {
   myti: "Mytí",
   kontrola: "Kontrola",
   lakovani: "Lakování",
-  expedice: "Expedice"
+  expedice: "Expedice",
+  dataNavijeni: "Data",
+  materialNavijeni: "Materiál",
+  strihNavijeni: "Střih",
+  navijeni: "Navíjení",
+  cinovaniNavijeni: "Cínování",
+  jadraNavijeni: "Montáž jader",
+  mereniNavijeni: "Měření",
+  lakovaniNavijeni: "Lakování",
+  testovaniNavijeni: "Testování",
+  expediceNavijeni: "Expedice"
 };
 
 document.querySelectorAll(".process-item").forEach(function(item) {
   item.addEventListener("click", function() {
     const process = this.dataset.process;
 
-    departmentCurrentPCB.textContent = processNamesPCB[process];
+    departmentCurrent.textContent = processNamesPCB[process];
 
     updateBottomNavigation(process);
   });
 });
 
+const departmentPage = document.querySelector(".department-page");
 
-const processOrderPCB = [
-  "data",
-  "material",
-  "pasta",
-  "smt",
-  "reflow",
-  "tht",
-  "myti",
-  "kontrola",
-  "lakovani",
-  "expedice"
-];
+let processOrder = []
+
+if (departmentPage) {
+
+  const department = departmentPage.dataset.department;
+
+  if (department === "navijeni") {
+
+      processOrder = [
+        "dataNavijeni",
+        "materialNavijeni",
+        "strihNavijeni",
+        "navijeni",
+        "cinovaniNavijeni",
+        "jadraNavijeni",
+        "mereniNavijeni",
+        "lakovaniNavijeni",
+        "testovaniNavijeni",
+        "expediceNavijeni"
+      ];
+
+  } else if (department === "osazovani") {
+
+      processOrder = [
+        "data",
+        "material",
+        "pasta",
+        "smt",
+        "reflow",
+        "tht",
+        "myti",
+        "kontrola",
+        "lakovani",
+        "expedice"
+      ];
+
+  } 
+
+}
 
 const processPrevButtons = document.querySelectorAll(".process-prev");
 const processTopButtons = document.querySelectorAll(".process-top");
 const processNextButtons = document.querySelectorAll(".process-next");
 
 function updateBottomNavigation(currentProcess) {
-  const currentIndex = processOrderPCB.indexOf(currentProcess);
-  const previousProcess = processOrderPCB[currentIndex - 1];
-  const nextProcess = processOrderPCB[currentIndex + 1];
+  const currentIndex = processOrder.indexOf(currentProcess);
+  const previousProcess = processOrder[currentIndex - 1];
+  const nextProcess = processOrder[currentIndex + 1];
 
 processPrevButtons.forEach(function(button) {
 
@@ -359,8 +397,6 @@ processTopButtons.forEach(function(button) {
     });
   });
 });
-
-updateBottomNavigation("data");
 
 const careerBlocks = document.querySelectorAll(".career-content-block");
 
@@ -459,15 +495,29 @@ actualityBlocks.forEach(function(block) {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
+
   const hash = window.location.hash.substring(1);
 
-  let process = hash || "data";
+  let process;
 
-  const processItem = document.querySelector(`.process-item[data-process="${process}"]`);
+  if (hash) {
+    process = hash;
+  } else if (processOrder.length > 0) {
+    process = processOrder[0];
+  }
+
+  if (!process) {
+    return;
+  }
+
+  const processItem = document.querySelector(
+    `.process-item[data-process="${process}"]`
+  );
 
   if (processItem) {
     processItem.click();
   }
+
 });
 
 
