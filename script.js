@@ -153,7 +153,7 @@ const processItems = document.querySelectorAll(".process-item");
 const processDetails = document.querySelectorAll(".process-detail");
 
 processItems.forEach(function(item){
-                    item.addEventListener("click", function() {
+                    item.addEventListener("click", function(event) {
 
                       const processName = item.dataset.process;
                       const detail = document.getElementById(processName);
@@ -168,6 +168,14 @@ processItems.forEach(function(item){
                       
                       item.classList.add("active");
                       detail.classList.add("active");
+
+                      if (event.isTrusted) {
+                        processNavigation.scrollIntoView({
+                          behavior: "smooth",
+                          block: "start"
+                        });
+                      }
+
                     });
                   });
 
