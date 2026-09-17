@@ -21,9 +21,24 @@
 
     <div class="menu-links" id="menuLinks">
       <a href="domu.html">O nás</a>
-      <a href="aktuality.html">Aktuality</a>  
-      <a href="sluzby.html" class="active">Služby a výroba</a>
-      <a href="vyrobky.html">Naše výrobky</a>
+      <a href="aktuality.html">Aktuality</a>
+      <div class="nav-dropdown">
+        <a href="sluzby.html" class="active">Služby a výroba</a>
+        <div class="nav-dropdown-menu">
+          <a href="osazovani.html">Osazování desek plošných spojů</a>
+          <a href="navijeni.html">Výroba vinutých dílů</a>
+          <a href="kabely.html">Výroba kabelových konfekcí</a>
+          <a href="kovo.html">Obrábění kovů a 3D tisk</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="vyrobky.html">Naše výrobky</a>
+        <div class="nav-dropdown-menu">
+          <a href="ledmoduly.html">LED moduly</a>
+          <a href="uizdroje.html">Napěťové a proudové zdroje</a>
+          <a href="pwmregulatory.html">PWM regulátory</a>
+        </div>
+      </div>  
       <a href="kontakty.html">Kontakty</a>
       <a href="kariery.html">Kariéra</a>
     </div>
@@ -79,10 +94,10 @@
     </div>  
   </nav>
 
-<main class="department-page">
+<main class="department-page" data-department="kabely">
 
     <section class="department-header">
-      <h1 class="department-title">Osazování desek plošných spojů
+      <h1 class="department-title">Výroba kabelových konfekcí
         <span class="department-separator">›</span>
         <span id="department-current">Data</span>
       </h1>
@@ -97,9 +112,10 @@
             alt="Vedoucí navijeni">
         </div>
         <div class="leader-quote">
-          <p>„Základem každého spolehlivého elektrického zařízení je stoprocentní kvalita a preciznost. V našem úseku kabelové konfekce proto přistupujeme ke každému kabelu, svazku či konektoru s maximální pečlivostí, aby přesně odpovídal technickým požadavkům zákazníka i standardům trhu.
-Jsme flexibilní- pomůžeme Vám se vzorkováním od jednoho kusu, stejně jako se středními a velkými sériemi. Díky vlastním skladovým zásobám komponent garantujeme rychlost a schopnost okamžitě reagovat. Vaši zakázku navíc umíme hladce propojit s dalšími službami v rámci naší komplexní výroby.
-Těšíme se na spolupráci na vašich projektech.“
+          <p>„V našem úseku kabelové konfekce přistupujeme ke každému kabelu, svazku či konektoru s maximální pečlivostí, aby přesně odpovídal technickým požadavkům zákazníka i standardům trhu.
+              Jsme flexibilní – pomůžeme Vám se vzorkováním od jednoho kusu, stejně jako se středními a velkými sériemi.
+               Díky vlastním skladovým zásobám komponent garantujeme rychlost a schopnost okamžitě reagovat.
+              Těšíme se na spolupráci na vašich projektech.“
 
           </p>
           <div class="leader-person">
@@ -109,7 +125,7 @@ Těšíme se na spolupráci na vašich projektech.“
         </div>
         <div class="contact-leader">
           <p>Máte technický dotaz nebo konkrétní požadavek?</p>
-          <a href="mailto:panacek.jr@vps-elektro.cz" class="contact-leader-btn">Kontaktujte technologa</a>
+          <a href="mailto:herman@vps-elektro.cz" class="contact-leader-btn">Kontaktujte technologa</a>
           <span class="contact-leader-email">herman@vps-elektro.cz</span>
         </div>
       </div>
@@ -121,11 +137,60 @@ Těšíme se na spolupráci na vašich projektech.“
 
         <div class="process-navigation-inner">
 
-          <button class="process-item active" data-process="data">
+          <button class="process-item active" data-process="dataKabely">
             <img
-              src="icons/dat.png"
-              alt="Data">
+              src="icons/Kabely/dat.png"
+              alt="Data kabely">
             <span>Data</span>
+          </button>
+
+          <button class="process-item" data-process="materialKabely">
+            <img
+              src="icons/Kabely/material.png"
+              alt="Materiál kabely">
+            <span>Materiál</span>
+          </button>
+
+          <button class="process-item" data-process="strihKabely">
+            <img
+              src="icons/Kabely/strih.png"
+              alt="Střih kabelů">
+            <span>Střih</span>
+          </button>
+
+          <button class="process-item" data-process="odizolovaniKabely">
+            <img
+              src="icons/Kabely/odizolovani.png"
+              alt="Odizolování kabelů">
+            <span>Odizolování</span>
+          </button>
+
+          <button class="process-item" data-process="terminaceKabely">
+            <img
+              src="icons/Kabely/terminace.png"
+              alt="Zakončení kabelů">
+            <span>Terminace</span>
+          </button>
+
+          <button class="process-item" data-process="svazkyKabely">
+            <img
+              src="icons/Kabely/svazek.png"
+              alt="Kabelové svazky">
+            <span>Svazky</span>
+          </button>
+
+          <button class="process-item" data-process="testovaniKabely">
+            <img
+              src="icons/Kabely/testovani.png"
+              alt="Testování kabelových konfekcí">
+            <span>Testování</span>
+          </button>
+
+          <button class="process-item" data-process="expediceKabely">
+            <img
+              src="icons/Kabely/exp.png"
+              alt="Data">
+            <span>Expedice</span>
           </button>
 
         </div>
@@ -135,7 +200,7 @@ Těšíme se na spolupráci na vašich projektech.“
       <div class="process-content">
 
         <!-- BLOK DATA -->
-        <div class="process-detail active" id="data">
+        <div class="process-detail active" id="dataKabely">
           <h2>Zpracování zákaznických dat a příprava výrobních podkladů</h2>
 
           <div class="process-content-block">
@@ -183,10 +248,152 @@ Těšíme se na spolupráci na vašich projektech.“
 
             <div class="process-content-text">
 
-              <h3>Cenová nabídka</h3>
+              <h3>Kabely</h3>
 
-              <p>Na základě zaslané poptávky na Vaši DPS nejprve připravíme nezávaznou cenovou nabídku.
-                Pro přípravu cenové nabídky potřebujeme kusovník a základní výrobní podklady k DPS, například Gerber nebo obdobný.
+              <p>Obsah
+              </p>
+
+            </div>
+            
+          </div>
+        
+          <div class="process-bottom-navigation">
+
+            <button class="process-bottom-button process-prev">← Předchozí</button>
+
+            <button class="process-bottom-button process-top">↑ Na lištu</button>
+
+            <button class="process-bottom-button process-next">Další →</button>
+              
+          </div>
+
+        </div>
+
+        <!-- BLOK MATERIÁL -->
+        <div class="process-detail" id="materialKabely">
+          <h2>Zajištění a skladování materiálu</h2>
+
+          <div class="process-content-block">
+
+            <div class="process-content-slider">
+
+              <div class="photo-slider">
+
+                <div class="photo-slides">
+
+                  <img src="icons/foto0.png" alt="Fotografie 1" class="photo-slide active">
+                  <img src="icons/foto1.png" alt="Fotografie 2" class="photo-slide">
+                  <img src="icons/foto2.png" alt="Fotografie 3" class="photo-slide">
+                  <img src="icons/foto3.png" alt="Fotografie 4" class="photo-slide">
+                  <img src="icons/foto4.png" alt="Fotografie 5" class="photo-slide">
+                  <img src="icons/foto5.png" alt="Fotografie 6" class="photo-slide">
+                  <img src="icons/foto6.png" alt="Fotografie 7" class="photo-slide">
+                  <img src="icons/foto7.png" alt="Fotografie 8" class="photo-slide">
+                  <img src="icons/foto8.png" alt="Fotografie 9" class="photo-slide">
+                  <img src="icons/foto9.png" alt="Fotografie 10" class="photo-slide">
+                  
+                </div>
+
+                <button class="slider-prev">‹</button>
+                <button class="slider-next">›</button>
+
+                <div class="slider-dots">
+
+                  <button class="slider-dot active"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  
+                </div>
+                
+              </div>
+
+            </div>
+
+            <div class="process-content-text">
+
+              <h3>Nadpis</h3>
+
+              <p>Obsah
+              </p>
+
+            </div>
+            
+          </div>
+
+          <div class="process-bottom-navigation">
+
+            <button class="process-bottom-button process-prev">← Předchozí</button>
+
+            <button class="process-bottom-button process-top">↑ Na lištu</button>
+
+            <button class="process-bottom-button process-next">Další →</button>
+              
+          </div>
+
+        </div>
+
+        <!-- BLOK STŘIH -->
+        <div class="process-detail" id="strihKabely">
+          <h2>Střih kabelů na požadovanou délku</h2>
+
+          <div class="process-content-block">
+
+            <div class="process-content-slider">
+
+              <div class="photo-slider">
+
+                <div class="photo-slides">
+
+                  <img src="icons/foto0.png" alt="Fotografie 1" class="photo-slide active">
+                  <img src="icons/foto1.png" alt="Fotografie 2" class="photo-slide">
+                  <img src="icons/foto2.png" alt="Fotografie 3" class="photo-slide">
+                  <img src="icons/foto3.png" alt="Fotografie 4" class="photo-slide">
+                  <img src="icons/foto4.png" alt="Fotografie 5" class="photo-slide">
+                  <img src="icons/foto5.png" alt="Fotografie 6" class="photo-slide">
+                  <img src="icons/foto6.png" alt="Fotografie 7" class="photo-slide">
+                  <img src="icons/foto7.png" alt="Fotografie 8" class="photo-slide">
+                  <img src="icons/foto8.png" alt="Fotografie 9" class="photo-slide">
+                  <img src="icons/foto9.png" alt="Fotografie 10" class="photo-slide">
+                  
+                </div>
+
+                <button class="slider-prev">‹</button>
+                <button class="slider-next">›</button>
+
+                <div class="slider-dots">
+
+                  <button class="slider-dot active"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  
+                </div>
+                
+              </div>
+
+            </div>
+
+            <div class="process-content-text">
+
+              <h3>Schleuniger EcoStrip 9320 a Ecostrip 9380</h3>
+
+              <p>Obsah
+              </p>
+
+              <p>Obsah
               </p>
 
             </div>
@@ -238,15 +445,537 @@ Těšíme se na spolupráci na vašich projektech.“
 
             <div class="process-content-text">
 
-              <h3>Příprava výrobních dat</h3>
+              <h3>Schleuniger EcoCut 3300</h3>
 
-              <p>Po zaslání objednávky připravíme výrobní podklady, stanovíme technologický postup a DPS zařadíme do výroby.</p>
+              <p>Obsah
+              </p>
 
-              <p>Pro přípravu výrobních dat potřebujeme osazovací data se souřadnicemi a výrobní data DPS ve formátu Gerber, ODB++ nebo podobná.</p>
+              <p>Obsah
+              </p>
 
             </div>
             
           </div>
+
+          <div class="process-content-block">
+
+            <div class="process-content-slider">
+
+              <div class="photo-slider">
+
+                <div class="photo-slides">
+
+                  <img src="icons/foto0.png" alt="Fotografie 1" class="photo-slide active">
+                  <img src="icons/foto1.png" alt="Fotografie 2" class="photo-slide">
+                  <img src="icons/foto2.png" alt="Fotografie 3" class="photo-slide">
+                  <img src="icons/foto3.png" alt="Fotografie 4" class="photo-slide">
+                  <img src="icons/foto4.png" alt="Fotografie 5" class="photo-slide">
+                  <img src="icons/foto5.png" alt="Fotografie 6" class="photo-slide">
+                  <img src="icons/foto6.png" alt="Fotografie 7" class="photo-slide">
+                  <img src="icons/foto7.png" alt="Fotografie 8" class="photo-slide">
+                  <img src="icons/foto8.png" alt="Fotografie 9" class="photo-slide">
+                  <img src="icons/foto9.png" alt="Fotografie 10" class="photo-slide">
+                  
+                </div>
+
+                <button class="slider-prev">‹</button>
+                <button class="slider-next">›</button>
+
+                <div class="slider-dots">
+
+                  <button class="slider-dot active"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  
+                </div>
+                
+              </div>
+
+            </div>
+
+            <div class="process-content-text">
+
+              <h3>Schleuniger PreFeeder 1000 a PreFeeder 2500</h3>
+
+              <p>Obsah
+              </p>
+
+              <p>Obsah
+              </p>
+
+            </div>
+            
+          </div>
+
+          <div class="process-bottom-navigation">
+
+            <button class="process-bottom-button process-prev">← Předchozí</button>
+
+            <button class="process-bottom-button process-top">↑ Na lištu</button>
+
+            <button class="process-bottom-button process-next">Další →</button>
+              
+          </div>
+
+        </div>
+
+        <!-- BLOK ODIZOLOVÁNÍ -->
+        <div class="process-detail" id="odizolovaniKabely">
+          <h2>Odstranění izolace, rozplétání a splétání stínění kabelů</h2>
+
+          <div class="process-content-block">
+
+            <div class="process-content-slider">
+
+              <div class="photo-slider">
+
+                <div class="photo-slides">
+
+                  <img src="icons/foto0.png" alt="Fotografie 1" class="photo-slide active">
+                  <img src="icons/foto1.png" alt="Fotografie 2" class="photo-slide">
+                  <img src="icons/foto2.png" alt="Fotografie 3" class="photo-slide">
+                  <img src="icons/foto3.png" alt="Fotografie 4" class="photo-slide">
+                  <img src="icons/foto4.png" alt="Fotografie 5" class="photo-slide">
+                  <img src="icons/foto5.png" alt="Fotografie 6" class="photo-slide">
+                  <img src="icons/foto6.png" alt="Fotografie 7" class="photo-slide">
+                  <img src="icons/foto7.png" alt="Fotografie 8" class="photo-slide">
+                  <img src="icons/foto8.png" alt="Fotografie 9" class="photo-slide">
+                  <img src="icons/foto9.png" alt="Fotografie 10" class="photo-slide">
+                  
+                </div>
+
+                <button class="slider-prev">‹</button>
+                <button class="slider-next">›</button>
+
+                <div class="slider-dots">
+
+                  <button class="slider-dot active"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  
+                </div>
+                
+              </div>
+
+            </div>
+
+            <div class="process-content-text">
+
+              <h3>Schleuniger Strip Series B340</h3>
+
+              <p>Obsah
+              </p>
+
+              <p>Obsah
+              </p>
+
+            </div>
+            
+          </div>
+
+          <div class="process-content-block">
+
+            <div class="process-content-slider">
+
+              <div class="photo-slider">
+
+                <div class="photo-slides">
+
+                  <img src="icons/foto0.png" alt="Fotografie 1" class="photo-slide active">
+                  <img src="icons/foto1.png" alt="Fotografie 2" class="photo-slide">
+                  <img src="icons/foto2.png" alt="Fotografie 3" class="photo-slide">
+                  <img src="icons/foto3.png" alt="Fotografie 4" class="photo-slide">
+                  <img src="icons/foto4.png" alt="Fotografie 5" class="photo-slide">
+                  <img src="icons/foto5.png" alt="Fotografie 6" class="photo-slide">
+                  <img src="icons/foto6.png" alt="Fotografie 7" class="photo-slide">
+                  <img src="icons/foto7.png" alt="Fotografie 8" class="photo-slide">
+                  <img src="icons/foto8.png" alt="Fotografie 9" class="photo-slide">
+                  <img src="icons/foto9.png" alt="Fotografie 10" class="photo-slide">
+                  
+                </div>
+
+                <button class="slider-prev">‹</button>
+                <button class="slider-next">›</button>
+
+                <div class="slider-dots">
+
+                  <button class="slider-dot active"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  
+                </div>
+                
+              </div>
+
+            </div>
+
+            <div class="process-content-text">
+
+              <h3>Schleuniger Unistrip 2015</h3>
+
+              <p>Obsah
+              </p>
+
+              <p>Obsah
+              </p>
+
+            </div>
+            
+          </div>
+
+          <div class="process-content-block">
+
+            <div class="process-content-slider">
+
+              <div class="photo-slider">
+
+                <div class="photo-slides">
+
+                  <img src="icons/foto0.png" alt="Fotografie 1" class="photo-slide active">
+                  <img src="icons/foto1.png" alt="Fotografie 2" class="photo-slide">
+                  <img src="icons/foto2.png" alt="Fotografie 3" class="photo-slide">
+                  <img src="icons/foto3.png" alt="Fotografie 4" class="photo-slide">
+                  <img src="icons/foto4.png" alt="Fotografie 5" class="photo-slide">
+                  <img src="icons/foto5.png" alt="Fotografie 6" class="photo-slide">
+                  <img src="icons/foto6.png" alt="Fotografie 7" class="photo-slide">
+                  <img src="icons/foto7.png" alt="Fotografie 8" class="photo-slide">
+                  <img src="icons/foto8.png" alt="Fotografie 9" class="photo-slide">
+                  <img src="icons/foto9.png" alt="Fotografie 10" class="photo-slide">
+                  
+                </div>
+
+                <button class="slider-prev">‹</button>
+                <button class="slider-next">›</button>
+
+                <div class="slider-dots">
+
+                  <button class="slider-dot active"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  
+                </div>
+                
+              </div>
+
+            </div>
+
+            <div class="process-content-text">
+
+              <h3>GLW CS60</h3>
+
+              <p>Obsah
+              </p>
+
+              <p>Obsah
+              </p>
+
+            </div>
+            
+          </div>
+
+          <div class="process-content-block">
+
+            <div class="process-content-slider">
+
+              <div class="photo-slider">
+
+                <div class="photo-slides">
+
+                  <img src="icons/foto0.png" alt="Fotografie 1" class="photo-slide active">
+                  <img src="icons/foto1.png" alt="Fotografie 2" class="photo-slide">
+                  <img src="icons/foto2.png" alt="Fotografie 3" class="photo-slide">
+                  <img src="icons/foto3.png" alt="Fotografie 4" class="photo-slide">
+                  <img src="icons/foto4.png" alt="Fotografie 5" class="photo-slide">
+                  <img src="icons/foto5.png" alt="Fotografie 6" class="photo-slide">
+                  <img src="icons/foto6.png" alt="Fotografie 7" class="photo-slide">
+                  <img src="icons/foto7.png" alt="Fotografie 8" class="photo-slide">
+                  <img src="icons/foto8.png" alt="Fotografie 9" class="photo-slide">
+                  <img src="icons/foto9.png" alt="Fotografie 10" class="photo-slide">
+                  
+                </div>
+
+                <button class="slider-prev">‹</button>
+                <button class="slider-next">›</button>
+
+                <div class="slider-dots">
+
+                  <button class="slider-dot active"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  
+                </div>
+                
+              </div>
+
+            </div>
+
+            <div class="process-content-text">
+
+              <h3>WiBS-10 a WiST-10</h3>
+
+              <p>Obsah
+              </p>
+
+              <p>Obsah
+              </p>
+
+            </div>
+            
+          </div>
+
+          <div class="process-bottom-navigation">
+
+            <button class="process-bottom-button process-prev">← Předchozí</button>
+
+            <button class="process-bottom-button process-top">↑ Na lištu</button>
+
+            <button class="process-bottom-button process-next">Další →</button>
+              
+          </div>
+
+        </div>
+
+        <!-- BLOK TERMINACE -->
+        <div class="process-detail" id="terminaceKabely">
+          <h2>Osazování, krimpování a cínování kabelových konfekcí</h2>
+
+          <div class="process-content-block">
+
+            <div class="process-content-slider">
+
+              <div class="photo-slider">
+
+                <div class="photo-slides">
+
+                  <img src="icons/foto0.png" alt="Fotografie 1" class="photo-slide active">
+                  <img src="icons/foto1.png" alt="Fotografie 2" class="photo-slide">
+                  <img src="icons/foto2.png" alt="Fotografie 3" class="photo-slide">
+                  <img src="icons/foto3.png" alt="Fotografie 4" class="photo-slide">
+                  <img src="icons/foto4.png" alt="Fotografie 5" class="photo-slide">
+                  <img src="icons/foto5.png" alt="Fotografie 6" class="photo-slide">
+                  <img src="icons/foto6.png" alt="Fotografie 7" class="photo-slide">
+                  <img src="icons/foto7.png" alt="Fotografie 8" class="photo-slide">
+                  <img src="icons/foto8.png" alt="Fotografie 9" class="photo-slide">
+                  <img src="icons/foto9.png" alt="Fotografie 10" class="photo-slide">
+                  
+                </div>
+
+                <button class="slider-prev">‹</button>
+                <button class="slider-next">›</button>
+
+                <div class="slider-dots">
+
+                  <button class="slider-dot active"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  
+                </div>
+                
+              </div>
+
+            </div>
+
+            <div class="process-content-text">
+
+              <h3>Mecal P107BT a WDT UP14</h3>
+
+              <p>Obsah
+              </p>
+
+              <p>Obsah
+              </p>
+
+            </div>
+            
+          </div>
+
+          <div class="process-content-block">
+
+            <div class="process-content-slider">
+
+              <div class="photo-slider">
+
+                <div class="photo-slides">
+
+                  <img src="icons/foto0.png" alt="Fotografie 1" class="photo-slide active">
+                  <img src="icons/foto1.png" alt="Fotografie 2" class="photo-slide">
+                  <img src="icons/foto2.png" alt="Fotografie 3" class="photo-slide">
+                  <img src="icons/foto3.png" alt="Fotografie 4" class="photo-slide">
+                  <img src="icons/foto4.png" alt="Fotografie 5" class="photo-slide">
+                  <img src="icons/foto5.png" alt="Fotografie 6" class="photo-slide">
+                  <img src="icons/foto6.png" alt="Fotografie 7" class="photo-slide">
+                  <img src="icons/foto7.png" alt="Fotografie 8" class="photo-slide">
+                  <img src="icons/foto8.png" alt="Fotografie 9" class="photo-slide">
+                  <img src="icons/foto9.png" alt="Fotografie 10" class="photo-slide">
+                  
+                </div>
+
+                <button class="slider-prev">‹</button>
+                <button class="slider-next">›</button>
+
+                <div class="slider-dots">
+
+                  <button class="slider-dot active"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  
+                </div>
+                
+              </div>
+
+            </div>
+
+            <div class="process-content-text">
+
+              <h3>Cavenago ET93</h3>
+
+              <p>Obsah
+              </p>
+
+              <p>Obsah
+              </p>
+
+            </div>
+            
+          </div>
+
+          <div class="process-bottom-navigation">
+
+            <button class="process-bottom-button process-prev">← Předchozí</button>
+
+            <button class="process-bottom-button process-top">↑ Na lištu</button>
+
+            <button class="process-bottom-button process-next">Další →</button>
+              
+          </div>
+
+        </div>
+
+        <!-- BLOK SVAZKY -->
+        <div class="process-detail" id="svazkyKabely">
+          <h2>Výroba kabelových svazků</h2>
+
+          <div class="process-content-block">
+
+            <div class="process-content-slider">
+
+              <div class="photo-slider">
+
+                <div class="photo-slides">
+
+                  <img src="icons/foto0.png" alt="Fotografie 1" class="photo-slide active">
+                  <img src="icons/foto1.png" alt="Fotografie 2" class="photo-slide">
+                  <img src="icons/foto2.png" alt="Fotografie 3" class="photo-slide">
+                  <img src="icons/foto3.png" alt="Fotografie 4" class="photo-slide">
+                  <img src="icons/foto4.png" alt="Fotografie 5" class="photo-slide">
+                  <img src="icons/foto5.png" alt="Fotografie 6" class="photo-slide">
+                  <img src="icons/foto6.png" alt="Fotografie 7" class="photo-slide">
+                  <img src="icons/foto7.png" alt="Fotografie 8" class="photo-slide">
+                  <img src="icons/foto8.png" alt="Fotografie 9" class="photo-slide">
+                  <img src="icons/foto9.png" alt="Fotografie 10" class="photo-slide">
+                  
+                </div>
+
+                <button class="slider-prev">‹</button>
+                <button class="slider-next">›</button>
+
+                <div class="slider-dots">
+
+                  <button class="slider-dot active"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  
+                </div>
+                
+              </div>
+
+            </div>
+
+            <div class="process-content-text">
+
+              <h3>Puplichhuisen</h3>
+
+              <p>Obsah
+              </p>
+
+              <p>Obsah
+              </p>
+
+            </div>
+            
+          </div>
+
+          <div class="process-bottom-navigation">
+
+            <button class="process-bottom-button process-prev">← Předchozí</button>
+
+            <button class="process-bottom-button process-top">↑ Na lištu</button>
+
+            <button class="process-bottom-button process-next">Další →</button>
+              
+          </div>
+
+        </div>
+
+        <!-- BLOK TESTOVÁNÍ -->
+        <div class="process-detail" id="testovaniKabely">
+          <h2>Testování kabelových konfekcí</h2>
 
           <div class="process-content-block case-study">
 
@@ -293,11 +1022,86 @@ Těšíme se na spolupráci na vašich projektech.“
 
             <div class="process-content-text">
 
-              <h3>Úprava výrobních dat</h3>
+              <h3>Nadpis</h3>
 
-              <p>Opakovaně se setkáváme se situacemi, kdy má zákazník data ve starším nebo nestandardním formátu, který komplikuje výrobu desek.</p>
+              <p>Obsah
+              </p>
 
-              <p>Dokážeme pomoci s úpravou a reorganizací dat k deskám. Současně umíme doporučit změny, které mohou výrazně zjednodušit výrobu a přispět ke snížení výrobních nákladů.</p>
+              <p>Obsah
+              </p>
+
+              <p>Obsah
+              </p>
+
+            </div>
+            
+          </div>
+
+          <div class="process-bottom-navigation">
+
+            <button class="process-bottom-button process-prev">← Předchozí</button>
+
+            <button class="process-bottom-button process-top">↑ Na lištu</button>
+
+            <button class="process-bottom-button process-next">Další →</button>
+              
+          </div>
+
+        </div>
+
+        <!-- BLOK EXPEDICE -->
+        <div class="process-detail" id="expediceKabely">
+          <h2>Expedice</h2>
+
+          <div class="process-content-block">
+
+            <div class="process-content-slider">
+
+              <div class="photo-slider">
+
+                <div class="photo-slides">
+
+                  <img src="icons/foto0.png" alt="Fotografie 1" class="photo-slide active">
+                  <img src="icons/foto1.png" alt="Fotografie 2" class="photo-slide">
+                  <img src="icons/foto2.png" alt="Fotografie 3" class="photo-slide">
+                  <img src="icons/foto3.png" alt="Fotografie 4" class="photo-slide">
+                  <img src="icons/foto4.png" alt="Fotografie 5" class="photo-slide">
+                  <img src="icons/foto5.png" alt="Fotografie 6" class="photo-slide">
+                  <img src="icons/foto6.png" alt="Fotografie 7" class="photo-slide">
+                  <img src="icons/foto7.png" alt="Fotografie 8" class="photo-slide">
+                  <img src="icons/foto8.png" alt="Fotografie 9" class="photo-slide">
+                  <img src="icons/foto9.png" alt="Fotografie 10" class="photo-slide">
+                  
+                </div>
+
+                <button class="slider-prev">‹</button>
+                <button class="slider-next">›</button>
+
+                <div class="slider-dots">
+
+                  <button class="slider-dot active"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  <button class="slider-dot"></button>
+                  
+                </div>
+                
+              </div>
+
+            </div>
+
+            <div class="process-content-text">
+
+              <h3>Nadpis</h3>
+
+              <p>Obsah
+              </p>
 
             </div>
             
@@ -348,6 +1152,29 @@ Těšíme se na spolupráci na vašich projektech.“
     </div>
         
   </footer>
+
+  <div class="inquiry-bar">
+
+    <div class="inquiry-tab">
+      <span>POPTÁVKA</span>
+    </div>
+
+    <div class="inquiry-content">
+
+      <div class="inquiry-text">
+
+        <strong>Máte zájem o naše služby?</strong>
+        <span>Napiště nám:</span>
+
+        <a href="mailto:info@vps-elektro.cz">
+          info@vps-elektro.cz
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
 
   <script src="script.js"></script>
 </body>

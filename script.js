@@ -271,7 +271,18 @@ const processNamesPCB = {
   mereniNavijeni: "Měření",
   lakovaniNavijeni: "Lakování",
   testovaniNavijeni: "Testování",
-  expediceNavijeni: "Expedice"
+  expediceNavijeni: "Expedice",
+  dataKabely: "Data",
+  materialKabely: "Materiál",
+  strihKabely: "Střih",
+  odizolovaniKabely: "Odizolování",
+  terminaceKabely: "Terminace",
+  svazkyKabely: "Svazky",
+  testovaniKabely: "Testování",
+  expediceKabely: "Expedice",
+  obrabeniKovo: "Obrábění",
+  dtiskKovo: "3D tisk",
+  vyvojKovo: "Vývoj"
 };
 
 document.querySelectorAll(".process-item").forEach(function(item) {
@@ -322,7 +333,28 @@ if (departmentPage) {
         "expedice"
       ];
 
-  } 
+  } else if (department === "kabely") {
+
+     processOrder = [
+        "dataKabely",
+        "materialKabely",
+        "strihKabely",
+        "odizolovaniKabely",
+        "terminaceKabely",
+        "svazkyKabely",
+        "testovaniKabely",
+        "expediceKabely"
+      ];
+
+  } else if (department === "kovo") {
+
+      processOrder = [
+        "obrabeniKovo",
+        "dtiskKovo",
+        "vyvojKovo"
+    ];
+
+  }
 
 }
 
