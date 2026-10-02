@@ -1228,11 +1228,11 @@ window.addEventListener("scroll", function () {
 
   if (window.innerWidth <= 1024) {
 
-    if (window.scrollY > 60) {
+    if (window.scrollY > 120) {
       navigation.classList.add("scrolled");
     } 
     
-    if (window.scrollY < 55) {
+    if (window.scrollY < 20) {
       navigation.classList.remove("scrolled");
     }
 
