@@ -244,7 +244,7 @@ if (slider &&
     } 
 
     touchStartX = event.changedTouches[0].clientX;
-    rouchStartY = event.changedTouches[0].clientY;
+    touchStartY = event.changedTouches[0].clientY;
 
   }, {passive: true});
 
