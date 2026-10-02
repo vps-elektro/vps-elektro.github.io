@@ -1232,7 +1232,7 @@ window.addEventListener("scroll", function () {
       navigation.classList.add("scrolled");
     } 
     
-    if (window.scrollY < 20) {
+    if (window.scrollY < 5) {
       navigation.classList.remove("scrolled");
     }
 
