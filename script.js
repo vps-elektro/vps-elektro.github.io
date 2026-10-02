@@ -1,3 +1,26 @@
+let savedScrollPosition = 0;
+
+function openMobileMenu() {
+
+  const menu = document.getElementById("menuLinks");
+
+  if (!menu) return;
+
+  savedScrollPosition = window.scrollY;
+
+  menu.classList.add("open");
+
+  document.documentElement.classList.add("menu-open");
+  document.body.classList.add("menu-open");
+
+  document.body.style.position = "fixed";
+  document.body.style.top = `-${savedScrollPosition}px`;
+  document.body.style.left = "0";
+  document.body.style.right = "0";
+  document.body.style.width = "100%";
+
+}
+
 function closeMobileMenu() {
 
   const menu = document.getElementById("menuLinks");
@@ -6,7 +29,30 @@ function closeMobileMenu() {
 
   menu.classList.remove("open");
 
+  document.documentElement.style.scrollBehavior = "auto";
+  document.body.style.scrollBehavior = "auto";
+
+  document.body.style.position = "";
+  document.body.style.top = "";
+  document.body.style.left = "";
+  document.body.style.right = "";
+  document.body.style.width = "";
+
+  window.scrollTo(0, savedScrollPosition);
+
+  document.documentElement.classList.remove("menu-open");
   document.body.classList.remove("menu-open");
+
+  requestAnimationFrame(function() {
+
+    requestAnimationFrame(function() {
+
+      document.documentElement.style.scrollBehavior = "";
+      document.body.style.scrollBehavior = "";
+
+    });
+
+  });
 
   document.querySelectorAll(".nav-dropdown.open").forEach(function(dropdown) {
 
@@ -26,7 +72,7 @@ function closeMobileMenu() {
 
 function toggleMenu() {
 
-  const menu = document.querySelector("#menuLinks");
+  const menu = document.getElementById("menuLinks");
 
   if (!menu) return;
 
@@ -34,9 +80,7 @@ function toggleMenu() {
 
   if (isOpening) {
 
-    menu.classList.add("open");
-
-    document.body.classList.add("menu-open");
+    openMobileMenu();
 
   } else {
 
@@ -53,7 +97,7 @@ dropdownToggles.forEach(function(toggle) {
   toggle.addEventListener("click", function(event) {
 
     event.preventDefault();
-    event.stopImmediatePropagation();
+    event.stopPropagation();
 
     if (window.innerWidth > 1024) {
 

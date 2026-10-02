@@ -3253,6 +3253,7 @@ map-container.contacts-general-map iframe {
     display: flex;
   }
 
+  html.menu-open,
   body.menu-open {
     overflow: hidden;
   }
@@ -3298,7 +3299,7 @@ map-container.contacts-general-map iframe {
 
     inset: 0;
 
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: rgba(0, 0, 0, 0.65);
 
     opacity: 0;
     visibility: hidden;
