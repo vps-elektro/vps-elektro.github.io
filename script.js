@@ -102,7 +102,7 @@ dropdownToggles.forEach(function(toggle) {
     event.preventDefault();
     event.stopPropagation();
 
-    if (window.innerWidth > 1024) {
+    if (window.innerWidth > 1350) {
 
       return;
 
@@ -238,7 +238,7 @@ if (slider &&
 
   slider.addEventListener("touchstart", function(event) {
 
-    if (window.innerWidth > 1024) {
+    if (window.innerWidth > 1350) {
 
       return;
 
@@ -251,7 +251,7 @@ if (slider &&
 
   slider.addEventListener("touchend", function(event) {
 
-    if (window.innerWidth > 1024) {
+    if (window.innerWidth > 1350) {
 
       return;
 
@@ -1238,7 +1238,7 @@ function updateStickyMenu() {
 
   if (!mobileMenuToggle || !navigation) return;
 
-  if (window.innerWidth > 1024) {
+  if (window.innerWidth > 1350) {
 
     mobileMenuToggle.classList.remove("sticky-visible");
     return;
@@ -1276,5 +1276,49 @@ window.addEventListener("resize", function() {
 
   measureMobileNavigation();
   updateStickyMenu();
+
+});
+
+function equalizeReasonsBlocks() {
+
+  const reasonsBlocks = document.querySelectorAll(".reasons-block");
+
+  if (reasonsBlocks.length === 0) {
+
+    return;
+
+  }
+
+  let maxHeight = 0;
+
+  reasonsBlocks.forEach(function(block) {
+
+    block.style.minHeight = "";
+
+    const blockHeight = block.offsetHeight;
+
+    if (blockHeight > maxHeight) {
+      maxHeight = blockHeight;
+    }
+
+  });
+
+  reasonsBlocks.forEach(function(block) {
+
+    block.style.minHeight = `${maxHeight}px`;
+
+  });
+
+}
+
+window.addEventListener("load", function() {
+
+  equalizeReasonsBlocks();
+
+});
+
+window.addEventListener("resize", function() {
+
+  equalizeReasonsBlocks();
 
 });

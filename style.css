@@ -3099,7 +3099,7 @@ map-container.contacts-general-map iframe {
   text-decoration: underline;
 }
 
-@media (min-width: 1025px) and (hover: hover) {
+@media (min-width: 1351px) and (hover: hover) {
 
     .nav-dropdown:hover .nav-dropdown-menu {
     opacity: 1;
@@ -3157,7 +3157,7 @@ map-container.contacts-general-map iframe {
 
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1350px) {
 
   /* Nastavení pro telefony a tablety */
 
@@ -3593,9 +3593,63 @@ map-container.contacts-general-map iframe {
 
 } 
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
 
   /* Nastavení pro telefony */
+
+  .reasons-block {
+    display: grid;
+
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+      "icon title"
+      "text text";
+
+    align-items: center;
+    justify-self: center;
+    gap: 0 20px;
+    width: 90%;
+    margin: 10px auto;
+
+    box-sizing: border-box;
+  }
+
+  .reasons-block-image {
+    grid-area: icon;
+
+    width: 50px;
+    height: 50px;
+
+    margin: 5px 10px;
+
+    align-self: center;
+  }
+
+  .reasons-block-text {
+    display: contents;
+  }
+
+  .reasons-block-text h2 {
+    grid-area: title;
+
+    text-align: left;
+
+    margin: 0;
+
+    font-size: 20px;
+  }
+
+  .reasons-block-text p {
+    grid-area: text;
+
+    display: flex;
+
+    margin: 0 10px 5px;
+
+    font-size: 16px;
+    line-height: 1.4;
+  }
 
 } 
     
