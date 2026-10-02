@@ -9,18 +9,17 @@ function openMobileMenu() {
   if (!menu) return;
 
   savedScrollPosition = window.scrollY;
-
-  menu.classList.add("open");
-
-  document.documentElement.classList.add("menu-open");
-  document.body.classList.add("menu-open");
-
+/*
   document.body.style.position = "fixed";
   document.body.style.top = `-${savedScrollPosition}px`;
   document.body.style.left = "0";
   document.body.style.right = "0";
   document.body.style.width = "100%";
+*/
+  document.documentElement.classList.add("menu-open");
+  document.body.classList.add("menu-open");
 
+  menu.classList.add("open");
 }
 
 function closeMobileMenu() {
@@ -33,13 +32,13 @@ function closeMobileMenu() {
 
   document.documentElement.style.scrollBehavior = "auto";
   document.body.style.scrollBehavior = "auto";
-
+/*
   document.body.style.position = "";
   document.body.style.top = "";
   document.body.style.left = "";
   document.body.style.right = "";
   document.body.style.width = "";
-
+*/
   window.scrollTo(0, savedScrollPosition);
 
   document.documentElement.classList.remove("menu-open");
@@ -51,6 +50,8 @@ function closeMobileMenu() {
 
       document.documentElement.style.scrollBehavior = "";
       document.body.style.scrollBehavior = "";
+
+      updateStickyMenu();
 
     });
 
@@ -1220,26 +1221,60 @@ if (leaderSlider) {
 
 }
 
-window.addEventListener("scroll", function () {
+const navigation = document.querySelector(".navigation");
+const mobileMenuToggle = document.querySelector(".menu-toggle");
 
-  const navigation = document.querySelector(".navigation");
+let mobileNavigationHeight = 0;
+
+function measureMobileNavigation() {
 
   if (!navigation) return;
 
-  if (window.innerWidth <= 1024) {
+  mobileNavigationHeight = navigation.offsetHeight;
 
-    if (window.scrollY > 120) {
-      navigation.classList.add("scrolled");
-    } 
-    
-    if (window.scrollY < 5) {
-      navigation.classList.remove("scrolled");
-    }
+}
+
+function updateStickyMenu() {
+
+  if (!mobileMenuToggle || !navigation) return;
+
+  if (window.innerWidth > 1024) {
+
+    mobileMenuToggle.classList.remove("sticky-visible");
+    return;
+
+  }
+
+  if (document.body.classList.contains("menu-open")) {
+
+    mobileMenuToggle.classList.remove("sticky-visible");
+    return;
+  }
+
+  if (window.scrollY > mobileNavigationHeight) {
+
+    mobileMenuToggle.classList.add("sticky-visible");
 
   } else {
 
-    navigation.classList.remove("scrolled");
+    mobileMenuToggle.classList.remove("sticky-visible");
 
   }
+
+}
+
+measureMobileNavigation();
+updateStickyMenu();
+
+window.addEventListener("scroll", function() {
+
+  updateStickyMenu();
+
+});
+
+window.addEventListener("resize", function() {
+
+  measureMobileNavigation();
+  updateStickyMenu();
 
 });

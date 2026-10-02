@@ -3179,14 +3179,6 @@ map-container.contacts-general-map iframe {
     z-index: 1000;
   }
 
-  .navigation-placeholder {
-    height: 0;
-  }
-
-  .navigation.scrolled + .navigation-placeholder {
-    height: 150px;
-  }
-
   .slider {
     margin-top: 0;
   }
@@ -3195,36 +3187,11 @@ map-container.contacts-general-map iframe {
     width: 100%;
     justify-content: center;
     padding: 12px 0;
-
-    transition:
-      max-height 0.3s ease,
-      padding 0.3s ease,
-      opacity 0.3s ease;
-
-      max-height: 100px;
-      overflow: hidden;
   }
 
   .logo {
     height: 55px;
     width: auto;
-  }
-
-  .navigation.scrolled {
-    position: fixed;
-
-    top: 0;
-    left: 0;
-    right: 0;
-
-    width: 100%;
-  }
-
-  .navigation.scrolled .logo-link {
-    max-height: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    opacity: 0;
   }
 
   .menu-toggle {
@@ -3240,6 +3207,54 @@ map-container.contacts-general-map iframe {
     cursor: pointer;
   }
 
+  /*
+  .menu-toggle.sticky-hidden {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    z-index: 1002;
+
+    transform: translateY(-100%);
+    opacity: 0;
+
+    transition:
+      transform 10s ease,
+      opacity 10s ease;
+
+    pointer-events: none;
+  }
+  */
+
+  .menu-toggle.sticky-visible {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    z-index: 1002;
+
+    animation: stickyMenuSlideIn 0.45s ease forwards;
+  }
+
+  @keyframes stickyMenuSlideIn {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
   .menu-links {
     display: none;
     flex-direction: column;
@@ -3252,22 +3267,6 @@ map-container.contacts-general-map iframe {
 
     margin:0;
     padding: 12px 0;
-
-    max-height: 80px;
-    overflow: hidden;
-    opacity: 1;
-
-    transition:
-      max-height 0.3s ease,
-      padding 0.3s ease,
-      opacity 0.3s ease;
-  }
-
-  .navigation.scrolled .social-links {
-    max-height: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    opacity: 0;
   }
 
   .menu-links.open {
@@ -3302,11 +3301,21 @@ map-container.contacts-general-map iframe {
   body.menu-open .social-links, 
   body.menu-open .navigation .logo-link,
   body.menu-open .menu-toggle {
-    flex-shrink: 0
+    flex-shrink: 0;
   }
 
-  body.menu-open .navigation .logo-link, 
-  body.menu-open .navigation.scrolled .logo-link {
+  body.menu-open .menu-toggle.sticky-visible {
+    position: static;
+
+    width: 100%;
+
+    transform: none;
+    opacity: 1;
+
+    animation: none;
+  }
+
+  body.menu-open .navigation .logo-link {
     display: flex;
 
     max-height: 100px;
@@ -3321,8 +3330,7 @@ map-container.contacts-general-map iframe {
     display: flex;
   }
 
-  body.menu-open .navigation .social-links, 
-  body.menu-open .navigation.scrolled .social-links {
+  body.menu-open .navigation .social-links {
     display: flex;
 
     max-height: 80px;
@@ -3336,8 +3344,12 @@ map-container.contacts-general-map iframe {
 
     inset: 0;
 
+    /*
     background-color: rgba(0, 0, 0, 0.65);
+    */
 
+    background-color: #1e532f;
+    
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
