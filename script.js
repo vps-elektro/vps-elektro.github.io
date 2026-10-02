@@ -1,27 +1,49 @@
-function toggleMenu() {
+function closeMobileMenu() {
+
   const menu = document.getElementById("menuLinks");
 
   if (!menu) return;
 
-  menu.classList.toggle("open");
+  menu.classList.remove("open");
 
-  if (!menu.classList.contains("open")) {
+  document.body.classList.remove("menu-open");
 
-    document.querySelectorAll(".nav-dropdown.open").forEach(function(dropdown) {
+  document.querySelectorAll(".nav-dropdown.open").forEach(function(dropdown) {
 
-      dropdown.classList.remove("open");
+    dropdown.classList.remove("open");
 
-      const toggle = dropdown.querySelector(".nav-dropdown-toggle");
+    const toggle = dropdown.querySelector(".nav-dropdown-toggle");
 
-      if (toggle) {
+    if (toggle) {
 
-        toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-expanded", "false");
 
-      } 
+    } 
 
-    });
+  });
+
+}
+
+function toggleMenu() {
+
+  const menu = document.querySelector("#menuLinks");
+
+  if (!menu) return;
+
+  const isOpening = !menu.classList.contains("open");
+
+  if (isOpening) {
+
+    menu.classList.add("open");
+
+    document.body.classList.add("menu-open");
+
+  } else {
+
+    closeMobileMenu();
 
   }
+
 }
 
 const dropdownToggles = document.querySelectorAll(".nav-dropdown-toggle");
@@ -79,6 +101,17 @@ dropdownToggles.forEach(function(toggle) {
   });
 
 });
+
+const mobileMenuOverlay = document.querySelector(".mobile-menu-overlay");
+
+if (mobileMenuOverlay) {
+
+  mobileMenuOverlay.addEventListener("click", function() {
+
+    closeMobileMenu();
+
+  });
+}
 
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".slide-dot");

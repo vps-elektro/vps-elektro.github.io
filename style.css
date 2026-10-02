@@ -3253,6 +3253,71 @@ map-container.contacts-general-map iframe {
     display: flex;
   }
 
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  body.menu-open .navigation {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    max-height: 100vh;
+    overflow-y: auto;
+
+    z-index: 1001;
+  }
+
+  body.menu-open .navigation .logo-link, 
+  body.menu-open .navigation.scrolled .logo-link {
+    display: flex;
+
+    max-height: 100px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    opacity: 1;
+  }
+
+  body.menu-open .menu-links {
+    display: flex;
+  }
+
+  body.menu-open .navigation .social-links, 
+  body.menu-open .navigation.scrolled .social-links {
+    display: flex;
+  }
+
+  .mobile-menu-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.55);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+
+    z-index: 1000;
+  }
+
+
+  body.menu-open .mobile-menu-overlay {
+    opacity: 1;
+    visibility: visible;
+
+    pointer-events: auto;
+  }
+
   .menu-links > a {
     display: flex;
 
@@ -3345,7 +3410,7 @@ map-container.contacts-general-map iframe {
     border: none;
 
     background-color: transparent;
-    color: #888;
+    color: #1e532f;
 
     font-size: 30px;
     line-height: 1;
