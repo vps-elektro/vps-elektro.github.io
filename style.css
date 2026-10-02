@@ -3269,6 +3269,7 @@ map-container.contacts-general-map iframe {
 
     max-height: 100dvh;
     overflow-y: auto;
+    overflow-x: hidden;
 
     z-index: 1001;
 
