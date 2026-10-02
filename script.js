@@ -14,7 +14,7 @@ function openMobileMenu() {
   document.body.style.top = `-${savedScrollPosition}px`;
   document.body.style.left = "0";
   document.body.style.right = "0";
-  document.body.style.width = "100%";
+  document.body.style.width = "100%"; 
 */
   document.documentElement.classList.add("menu-open");
   document.body.classList.add("menu-open");
