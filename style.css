@@ -3524,6 +3524,10 @@ map-container.contacts-general-map iframe {
     touch-action: pan-y;
   }
 
+  .slider-arrow {
+    display: none;
+  }
+
   .slide-text {
     width: 70%;
   }
