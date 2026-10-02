@@ -1,3 +1,5 @@
+/* Obecné - Navigace */
+
 let savedScrollPosition = 0;
 
 function openMobileMenu() {
@@ -157,52 +159,132 @@ if (mobileMenuOverlay) {
   });
 }
 
+/* Index - Hero slider */
+
+const slider = document.querySelector(".slider");
+
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".slide-dot");
 
 const leftArrow = document.querySelector(".slider-arrow-left");
 const rightArrow = document.querySelector(".slider-arrow-right");
 
-if (slides.length > 0 &&
-    dots.length > 0 &&
-    leftArrow &&
-    rightArrow) {
+if (slider &&
+    slides.length > 0 &&
+    dots.length > 0) {
 
   let currentSlide = 0;
   
   function showSlide(index) {
+
     slides[currentSlide].classList.remove("active");
     dots[currentSlide].classList.remove("active");
 
     currentSlide = index;
 
     if (currentSlide >= slides.length) {
+
       currentSlide = 0;
+
     } 
     if (currentSlide < 0) {
-       currentSlide = slides.length -1;
+
+       currentSlide = slides.length - 1;
+
     }
 
     slides[currentSlide].classList.add("active");
-    dots[currentSlide].classList.add("active");    
+    dots[currentSlide].classList.add("active"); 
+
   }
 
   let slideTimer;
     
   function startSlideTimer() {
+
     clearInterval(slideTimer);
 
     slideTimer = setInterval(function () {
+
       showSlide(currentSlide + 1);
       }, 15000);
+
     }
     
-  rightArrow.addEventListener("click", function() {showSlide(currentSlide + 1); startSlideTimer();});
-  leftArrow.addEventListener("click", function() {showSlide(currentSlide - 1); startSlideTimer();});
+  if (rightArrow) {
 
-  dots.forEach(function (dot, index) {dot.addEventListener("click", function () {showSlide(index); startSlideTimer()});});
+    rightArrow.addEventListener("click", function() {showSlide(currentSlide + 1); startSlideTimer();});
+
+  }
+
+  if (leftArrow) {
+
+    leftArrow.addEventListener("click", function() {showSlide(currentSlide - 1); startSlideTimer();});
+
+  }
+
+  dots.forEach(function (dot, index) {
+    
+    dot.addEventListener("click", function () {showSlide(index); startSlideTimer()});
+  
+  });
+
+  let touchStartX = 0;
+  let touchStartY = 0;
+
+  let touchEndX = 0;
+  let touchEndY = 0;
+
+  slider.addEventListener("touchstart", function(event) {
+
+    if (window.innerWidth > 1024) {
+
+      return;
+
+    } 
+
+    touchStartX = event.changedTouches[0].clientX;
+    rouchStartY = event.changedTouches[0].clientY;
+
+  }, {passive: true});
+
+  slider.addEventListener("touchend", function(event) {
+
+    if (window.innerWidth > 1024) {
+
+      return;
+
+    }
+
+    touchEndX = event.changedTouches[0].clientX;
+    touchEndY = event.changedTouches[0].clientY;
+
+    const distanceX = touchEndX - touchStartX;
+    const distanceY = touchEndY - touchStartY;
+
+    if (
+      Math.abs(distanceX) > 50 &&
+      Math.abs(distanceX) > Math.abs(distanceY)
+    ) {
+
+      if (distanceX < 0) {
+
+        showSlide(currentSlide + 1);
+
+      } else {
+
+        showSlide(currentSlide - 1);
+
+      }
+
+      startSlideTimer();
+
+    }
+
+  }, {passive: true});
 
   startSlideTimer();
+
 }
 
 const chevronItems = document.querySelectorAll(".chevron-item");
