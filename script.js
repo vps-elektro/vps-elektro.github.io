@@ -950,3 +950,60 @@ function createProductPagination() {
 if (productPagination && productItems.length > 0) {
   showProductPage(1);
 }
+
+
+const leaderSlider = document.querySelector(".leader-slider");
+
+if (leaderSlider) {
+  const leaderSection = leaderSlider.closest(".leader-section");
+  const leaderSlides = leaderSlider.querySelectorAll(".leader-slide");
+  const leaderDots = leaderSection.querySelectorAll(".leader-dot");
+
+  let leaderIndex = 0;
+
+  function showLeader(index) {
+    leaderSlides.forEach(slide => slide.classList.remove("active"));
+    leaderDots.forEach(dot => dot.classList.remove("active"));
+
+    leaderSlides[index].classList.add("active");
+    leaderDots[index].classList.add("active");
+
+    leaderIndex = index;
+  }
+
+  leaderDots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      showLeader(index);
+    });
+  });
+
+  setInterval(() => {
+    const nextIndex = (leaderIndex + 1) % leaderSlides.length;
+    showLeader(nextIndex);
+  }, 30000);
+
+}
+
+window.addEventListener("scroll", function () {
+
+  const navigation = document.querySelector(".navigation");
+
+  if (!navigation) return;
+
+  if (window.innerWidth <= 1024) {
+
+    if (window.scrollY > 60) {
+      navigation.classList.add("scrolled");
+    } 
+    
+    if (window.scrollY < 55) {
+      navigation.classList.remove("scrolled");
+    }
+
+  } else {
+
+    navigation.classList.remove("scrolled");
+
+  }
+
+});
