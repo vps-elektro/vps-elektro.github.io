@@ -3142,6 +3142,11 @@ map-container.contacts-general-map iframe {
 
   /* Obecná nastavení -> prvky navigační lišty*/
 
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   .navigation {
     position: relative;
     top: auto;
