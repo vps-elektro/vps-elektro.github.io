@@ -1,4 +1,4 @@
-/* Obecné - Navigace */
+/* Obecné - Navigace  */
 
 let savedScrollPosition = 0;
 
