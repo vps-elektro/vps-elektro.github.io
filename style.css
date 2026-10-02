@@ -3143,13 +3143,13 @@ map-container.contacts-general-map iframe {
   /* Obecná nastavení -> prvky navigační lišty*/
 
   .navigation {
-    position: sticky;
-    top: 0px;
+    position: relative;
+    top: auto;
+
+    width: 100%;
     margin-top: 0 !important;
 
     flex-wrap: wrap;
-    width: 100%;
-
     z-index: 1000;
   }
 
@@ -3174,6 +3174,16 @@ map-container.contacts-general-map iframe {
   .logo {
     height: 55px;
     width: auto;
+  }
+
+  .navigation.scrolled {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%
   }
 
   .navigation.scrolled .logo-link {
