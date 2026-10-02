@@ -3520,6 +3520,8 @@ map-container.contacts-general-map iframe {
   .slider {
     height: calc(100dvh - 200px);
     min-height: 400px;
+
+    touch-action: pan-y;
   }
 
   .slide-text {
@@ -3534,20 +3536,6 @@ map-container.contacts-general-map iframe {
     font-size: 16px;
   }
 
-  .slider-arrow {
-    width: 35px;
-    height: 55px;
-    font-size: 28px;
-  }
-
-  .slider-arrow-left {
-    left: 8px;
-  }
-
-  .slider-arrow-right {
-    right: 8px;
-  }
-
   .pdf-links {
     flex-direction: column;
     align-items: center;
@@ -3560,7 +3548,6 @@ map-container.contacts-general-map iframe {
   .pdf-links a {
     padding: 8px 12px;
   }
-
 
 } 
 
