@@ -1225,13 +1225,30 @@ const navigation = document.querySelector(".navigation");
 const mobileMenuToggle = document.querySelector(".menu-toggle");
 
 let mobileNavigationHeight = 0;
+let mobileMenuHeight = 0;
+let lastWindowWidth = window.innerWidth;
 
 function measureMobileNavigation() {
 
-  if (!navigation) return;
+  if (!navigation || !mobileMenuToggle) return;
 
+  const wasSticky = mobileMenuToggle.classList.contains("sticky-visible");
+
+  mobileMenuToggle.classList.remove("sticky-visible");
+  navigation.classList.remove("menu-is-sticky");
+
+  mobileMenuHeight = mobileMenuToggle.offsetHeight;
   mobileNavigationHeight = navigation.offsetHeight;
 
+  navigation.style.setProperty(
+    "--mobile-menu-height",
+    `${mobileMenuHeight}px`
+  );
+
+  if (wasSticky) {
+    mobileMenuToggle.classList.add("sticky-visible");
+    navigation.classList.add("menu-is-sticky");
+  }
 }
 
 function updateStickyMenu() {
@@ -1241,6 +1258,8 @@ function updateStickyMenu() {
   if (window.innerWidth > 1350) {
 
     mobileMenuToggle.classList.remove("sticky-visible");
+    navigation.classList.remove("menu-is-sticky");
+
     return;
 
   }
@@ -1248,16 +1267,20 @@ function updateStickyMenu() {
   if (document.body.classList.contains("menu-open")) {
 
     mobileMenuToggle.classList.remove("sticky-visible");
+    navigation.classList.remove("menu-is-sticky");
+
     return;
   }
 
-  if (window.scrollY > mobileNavigationHeight) {
+  if (window.scrollY >= mobileNavigationHeight) {
 
     mobileMenuToggle.classList.add("sticky-visible");
+    navigation.classList.add("menu-is-sticky");
 
   } else {
 
     mobileMenuToggle.classList.remove("sticky-visible");
+    navigation.classList.remove("menu-is-sticky");
 
   }
 
@@ -1274,8 +1297,14 @@ window.addEventListener("scroll", function() {
 
 window.addEventListener("resize", function() {
 
-  measureMobileNavigation();
-  updateStickyMenu();
+  if (window.innerWidth !== lastWindowWidth) {
+
+    lastWindowWidth = window.innerWidth;
+
+    measureMobileNavigation();
+    updateStickyMenu();
+
+  }
 
 });
 
