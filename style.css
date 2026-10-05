@@ -3718,11 +3718,13 @@ map-container.contacts-general-map iframe {
   }
 
   .home-actuality-card {
-    flex: 0 0 45%;
+    flex: 0 0 60%;
 
     margin: 10px;
 
     aspect-ratio: 1/1;
+
+    min-height: 250px;
 
     overflow: hidden;
   }
@@ -3730,17 +3732,5 @@ map-container.contacts-general-map iframe {
 } 
     
 @media (max-width: 800px) {
-
-  .home
-
-  .home-actuality-card {
-    flex: 0 0 50%;
-
-    margin: 10px;
-
-    aspect-ratio: 1/1;
-
-    overflow: hidden;
-  }
 
 }
