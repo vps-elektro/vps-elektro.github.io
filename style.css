@@ -3764,7 +3764,7 @@ map-container.contacts-general-map iframe {
 
   .home-actuality-card {
     width: min(40%, 250px);
-    max-width: 300px;
+    max-width: 250px;
 
     aspect-ratio: 1 / 1;
   }
