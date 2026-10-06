@@ -1032,6 +1032,93 @@ function initHomeActualitiesScroll() {
 
 }
 
+function initCertificationScroll() {
+
+  const content = document.querySelector(".certification-cards");
+  const leftGradient = document.querySelector(".certification-gradient-left");
+  const rightGradient = document.querySelector(".certification-gradient-right");
+
+  if (!content || !leftGradient || !rightGradient) {
+    return;
+  }
+
+  function updateGradients() {
+
+    const maxScroll = content.scrollWidth - content.clientWidth;
+
+    if (maxScroll <= 0) {
+
+      leftGradient.style.width = "0%";
+      rightGradient.style.width = "0%";
+
+      return;
+    }
+
+    const currentScroll = content.scrollLeft;
+
+    const progress = currentScroll / maxScroll;
+
+    let outerGradient;
+    let middleGradient;
+
+    if (innerWidth < 1024) {
+
+      outerGradient = 20;
+      middleGradient = 10;
+
+    } else {
+
+      outerGradient = 30;
+      middleGradient = 15;
+
+    }
+
+    let leftWidth;
+    let rightWidth;
+
+    if (currentScroll <= 1) {
+
+      leftWidth = 0;
+      rightWidth = outerGradient;
+
+    } else if (currentScroll >= maxScroll - 1) {
+
+      leftWidth = outerGradient;
+      rightWidth = 0;
+
+    } else if (progress <= 0.5) {
+
+      const phase = progress / 0.5;
+
+      leftWidth = middleGradient * phase;
+
+      rightWidth = outerGradient - ((outerGradient - middleGradient) * phase);
+
+    } else {
+
+      const phase = (progress - 0.5) / 0.5;
+
+      leftWidth = middleGradient + ((outerGradient - middleGradient) * phase);
+
+      rightWidth = middleGradient * (1 - phase);
+
+    }
+
+    leftGradient.style.width = leftWidth + "%";
+    rightGradient.style.width = rightWidth + "%";
+
+  }
+
+  content.addEventListener("scroll", updateGradients, { passive: true });
+
+  window.addEventListener("resize", updateGradients);
+
+  updateGradients();
+
+}
+
+initCertificationScroll();
+
 
 const homeActualitiesContent = document.getElementById("home-actualities-content");
 

@@ -545,6 +545,18 @@ body {
     color: #1e532f;
   }
 
+  .certification-scroll-wrapper {
+    position: relative;
+
+    width: 70%;
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    background-color: white;
+
+  }
+
   .certification-cards {
     display: flex;
 
@@ -553,9 +565,9 @@ body {
 
     gap: 20px;
 
-    width: 70%;
+    width: 100%;
 
-    margin: 0 auto;
+    margin: 0;
 
     background-color: white;
     overflow-x: auto;
@@ -565,6 +577,41 @@ body {
     -webkit-overflow-scrolling: touch;
 
     padding: 10px 0 10px 0;
+  }
+
+  .certification-gradient {
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    width: 0;
+
+    pointer-events: none;
+
+    z-index: 20;
+
+    transition: width 0.15s linear;
+  }
+
+  .certification-gradient-left {
+    left: 0;
+
+    background: linear-gradient(
+      to right,
+      white 0%,
+      rgba(255, 255, 255, 0) 100% 
+    );
+  }
+
+  .certification-gradient-right {
+    right: 0;
+
+    background: linear-gradient(
+      to left, 
+      white 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
   }
 
   .certification-card {
@@ -3780,13 +3827,13 @@ map-container.contacts-general-map iframe {
     aspect-ratio: 1 / 1;
   }
 
-  .certification-cards {
+  .certification-scroll-wrapper {
     width: 100%;
   }
 
 } 
     
-@media (max-width: 700px) {
+@media (max-width: 650px) {
 
   .certification-cards { 
     justify-content: flex-start;
@@ -3812,6 +3859,5 @@ map-container.contacts-general-map iframe {
     width: 40%;
     height: 12%;
   }
-
 
 }
