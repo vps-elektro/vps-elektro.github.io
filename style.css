@@ -374,7 +374,11 @@ body {
   }
 
   .home-actualities-scroll-wrapper {
+    position: relative;
+
     width: 100%;
+
+    overflow: hidden;
   }
 
   .home-actualities-gradient {
@@ -383,19 +387,30 @@ body {
 
   .home-actualities-content {
     display: flex;
-    justify-content: center;
+
+    justify-content: flex-start;
     align-items: stretch;
+
     gap: 5px;
     width: 100%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
   }
 
   .home-actuality-card {
-    margin-top: 5px;
-    margin-bottom: 10px;
-    margin-right: 2px;
-    margin-left: 2px;
+    margin: 5px 5px 10px 5px;
   
-    flex: 1 1 0;
+    flex: 0 0 300px;
+
+    width: 300px;
+    max-width: 300px;
 
     position: relative;
     aspect-ratio: 1/1;
@@ -476,6 +491,43 @@ body {
 
   .home-actualities-link:hover {
     text-decoration: underline;
+  }
+
+  .home-actualities-gradient {
+    display: block;
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    width: 0%;
+
+    pointer-events: none;
+
+    z-index: 5;
+
+    transition: width 0.15s linear;
+  }
+
+  .home-actualities-gradient-left {
+    left: 0;
+
+    background: linear-gradient(
+      to right, 
+      white 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  .home-actualities-gradient-right {
+    right: 0;
+
+    background: linear-gradient(
+      to left, 
+      white 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
   }
 
   .certification-section {
@@ -3642,15 +3694,8 @@ map-container.contacts-general-map iframe {
   }
 
   .home-actuality-card {
-    flex: 0 0 40%;
-
-    margin: 10px;
-
-    aspect-ratio: 1 / 1;
-
-    height: auto;
-
-    overflow: hidden;
+    width: min(40%, 250px);
+    max-width: 250px;
   }
 
 }
@@ -3718,19 +3763,14 @@ map-container.contacts-general-map iframe {
   }
 
   .home-actuality-card {
-    flex: 0 0 75%;
+    width: min(40%, 250px);
+    max-width: 300px;
 
-    margin: 10px;
-
-    aspect-ratio: 1/1;
-
-    min-height: 250px;
-
-    overflow: hidden;
+    aspect-ratio: 1 / 1;
   }
 
 } 
     
-@media (max-width: 800px) {
+@media (max-width: 750px) {
 
 }

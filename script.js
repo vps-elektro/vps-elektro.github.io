@@ -961,7 +961,7 @@ if (homeActualitiesContent) {
 
     const actualityBlocks = actualitiesDocument.querySelectorAll(".actualities-content-block");
 
-    const latestActualities = Array.from(actualityBlocks).slice(0, 3);
+    const latestActualities = Array.from(actualityBlocks).slice(0, 6);
 
     latestActualities.forEach(function(actuality, index) {
 
