@@ -3792,4 +3792,26 @@ map-container.contacts-general-map iframe {
     justify-content: flex-start;
   }
 
+  .certification-card {
+    width: 284px;
+    min-width: 284px;
+    height: 400px;
+    min-height: 400px;
+  }
+
+  .iso-9001 {
+    top: 85%;
+    left: 10%;
+    width: 40%;
+    height: 12%;
+  }
+
+  .iso-14001 {
+    top: 85%;
+    right: 10%;
+    width: 40%;
+    height: 12%;
+  }
+
+
 }
