@@ -400,12 +400,10 @@ body {
     scroll-behavior: smooth;
 
     -webkit-overflow-scrolling: touch;
-
-    scrollbar-width: none;
   }
 
   .home-actuality-card {
-    margin: 5px 5px 10px 5px;
+    margin: 5px 5px 2px 5px;
   
     flex: 0 0 300px;
 
