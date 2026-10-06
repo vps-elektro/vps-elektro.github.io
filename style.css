@@ -3788,7 +3788,7 @@ map-container.contacts-general-map iframe {
     
 @media (max-width: 700px) {
 
-  .certification-cards {
+  .certification-cards { 
     justify-content: flex-start;
   }
 
