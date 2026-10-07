@@ -4198,9 +4198,9 @@ map-container.contacts-general-map iframe {
 
     z-index: 3;
 
-    font-size: 17px;
+    font-size: 19px;
 
-    margin-bottom: -55px;
+    margin-bottom: -60px;
   }
 
 }
@@ -4230,6 +4230,21 @@ map-container.contacts-general-map iframe {
     right: 10%;
     width: 40%;
     height: 12%;
+  }
+
+  .about-introduction {
+
+    padding: 120px 5% 0px;
+
+    color: white;
+
+    text-align: center;
+
+    z-index: 3;
+
+    font-size: 17px;
+
+    margin-bottom: -90px;
   }
 
 }
