@@ -400,6 +400,12 @@ body {
     scroll-behavior: smooth;
 
     -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+  }
+
+  .home-actualities-content::-webkit-scrollbar {
+    display: none;
   }
 
   .home-actuality-card {
@@ -528,6 +534,52 @@ body {
     );
   }
 
+  .home-actualities-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+    width: 100%;
+
+    min-height: 18px;
+
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .home-actualities-dot {
+    display: block;
+
+    width: 10px;
+    height: 10px;
+
+    min-width: 10px;
+    min-height: 10px;
+
+    padding: 0;
+    margin: 0;
+
+    border: 2px solid #1e532f;
+    border-radius: 50%;
+
+    background-color: transparent;
+
+    box-sizing: border-box;
+
+    appearance: none;
+    cursor: pointer;
+
+    transition:
+      background-color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .home-actualities-dot.active {
+    background-color: #1e532f;
+    transform: scale(1.05);
+  }
+
   .certification-section {
     width: 100%;
     background-color: #f4f4f4;
@@ -577,6 +629,8 @@ body {
     -webkit-overflow-scrolling: touch;
 
     padding: 10px 0 10px 0;
+
+    scrollbar-width: none;
   }
 
   .certification-gradient {
@@ -722,6 +776,54 @@ body {
 
   .iso-card:hover .iso-content {
     transform: scale(1.03);
+  }
+
+  .certification-dots {
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    width: 100%;
+    min-height: 18px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    background-color: white;
+  }
+
+  .certification-dot {
+    display: block;
+
+    width: 10px;
+    height: 10px;
+
+    min-width: 10px;
+    min-height: 10px;
+
+    padding: 0;
+    margin: 0;
+
+    border: 2px solid #1e532f;
+    border-radius: 50%;
+
+    background-color: transparent;
+
+    box-sizing: border-box;
+
+    appearance: none;
+    cursor: pointer;
+
+    transition:
+      background-color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .certification-dot.active {
+    background-color: #1e532f;
+    transform: scale(1.05);
   }
 
   /* Index - konec; Společné - pokračování */
@@ -3752,7 +3854,6 @@ map-container.contacts-general-map iframe {
   }
 
   .home-actuality-card {
-    width: min(40%, 250px);
     max-width: 250px;
   }
 
@@ -3820,18 +3921,19 @@ map-container.contacts-general-map iframe {
     width: 100%;
   }
 
-  .home-actuality-card {
-    width: min(40%, 250px);
-    max-width: 250px;
-
-    aspect-ratio: 1 / 1;
-  }
-
   .certification-scroll-wrapper {
     width: 100%;
   }
 
 } 
+
+@media (max-width: 715px) {
+
+  .certification-dots {
+    display: flex;
+  }
+
+}
     
 @media (max-width: 650px) {
 
