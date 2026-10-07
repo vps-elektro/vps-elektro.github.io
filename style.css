@@ -1118,10 +1118,13 @@ body {
 
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.92) 0%,
-    rgba(0, 0, 0, 0.55) 45%,
+    rgba(0, 0, 0, 0.92) 25%,
+    rgba(0, 0, 0, 0.55) 55%,
     rgba(0, 0, 0, 0) 100%
   );
+
+  pointer-events: none;
+  z-index: 2;
 }
 
 
@@ -1134,7 +1137,7 @@ body {
   font-size: 22px;
   line-height: 1.6;
   text-align: center;
-  width: 60%;
+  width: 70%;
 
   font-family: "Trebuchet MS", Arial, sans-serif;
   color: white;
@@ -3896,6 +3899,81 @@ map-container.contacts-general-map iframe {
     background-color: white;
   }
 
+  .about-us {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    width: 100%;
+    height: auto;
+
+    background-color: white;
+
+    overflow: hidden;
+  }
+
+  .about-us img {
+    position: relative;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+  }
+
+  .about-introduction {
+    position: relative;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 0px 20% 0px;
+
+    background-color: transparent;
+
+    color: white;
+
+    text-align: center;
+
+    z-index: 3;
+
+    font-size: 20px;
+
+    transform: translate(-50%, -40%);
+
+    margin-bottom: -35px;
+  }
+
+  .about-us::after {
+    height: 40%;
+
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.92) 45%,
+      rgba(0, 0, 0, 0.55) 75%,
+      rgba(0, 0, 0, 0) 100%
+    );
+
+  }
+
+}
+
+@media (max-width: 1150px) {
+
+  .about-introduction {
+
+    padding: 10px 10% 0px;
+
+    color: white;
+
+    text-align: center;
+
+    z-index: 3;
+
+    font-size: 20px;
+  }
+
 }
 
 @media (max-width: 1024px) {
@@ -4012,6 +4090,19 @@ map-container.contacts-general-map iframe {
     width: 30%;
   }
 
+  .about-introduction {
+
+    padding: 20px 5% 0px;
+
+    color: white;
+
+    text-align: center;
+
+    z-index: 3;
+
+    font-size: 19px;
+  }
+
 } 
 
 @media (max-width: 715px) {
@@ -4096,6 +4187,21 @@ map-container.contacts-general-map iframe {
   .contact-card-text p:not(.function) a {
     display: inline;
   } 
+
+  .about-introduction {
+
+    padding: 40px 5% 0px;
+
+    color: white;
+
+    text-align: center;
+
+    z-index: 3;
+
+    font-size: 17px;
+
+    margin-bottom: -55px;
+  }
 
 }
     
