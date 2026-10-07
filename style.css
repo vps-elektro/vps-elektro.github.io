@@ -2749,7 +2749,7 @@ map-container.contacts-general-map iframe {
 }
 
 .contact-card-image {
-  width: 35%;
+  width: 40%;
   flex-shrink: 0;
   overflow: hidden;
 }
@@ -2806,6 +2806,15 @@ map-container.contacts-general-map iframe {
 .contact-card-text a:hover {
   text-decoration: underline;
 }
+
+  .contact-card p a {
+    display: block
+  }
+
+  .contact-card p,
+  .contact-card p a {
+    text-align: left;
+  }
 
 /* Kariéra */
 
@@ -3887,10 +3896,6 @@ map-container.contacts-general-map iframe {
     background-color: white;
   }
 
-  .contact-card-image {
-    width: 25%;
-  }
-
 }
 
 @media (max-width: 1024px) {
@@ -4003,6 +4008,10 @@ map-container.contacts-general-map iframe {
     margin: 0 auto;
   }
 
+  .contact-card-image {
+    width: 30%;
+  }
+
 } 
 
 @media (max-width: 715px) {
@@ -4024,6 +4033,15 @@ map-container.contacts-general-map iframe {
   .contact-card {
     width: 100%;
     margin: 0 auto;
+  }
+
+  .contact-card p a {
+    display: block
+  }
+
+  .contact-card p,
+  .contact-card p a {
+    text-align: left;
   }
 
 }
