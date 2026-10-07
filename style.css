@@ -4031,18 +4031,71 @@ map-container.contacts-general-map iframe {
   }
 
   .contact-card {
+    display: grid;
+
+    grid-template-columns: 35% 1fr;
+    grid-template-areas: 
+      "photo name"
+      "photo function"
+      "contact contact";
+
+    column-gap: 5px;
+    row-gap: 5px;
+
     width: 100%;
-    margin: 0 auto;
+    padding: 5px 5px 5px;
+
+    box-sizing: border-box;
   }
 
-  .contact-card p a {
-    display: block
+  .contact-card-image {
+    grid-area: photo;
+
+    width: 100%;
+    height: 180px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
-  .contact-card p,
-  .contact-card p a {
+  .contact-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .contact-card-text {
+    display: contents
+  }
+
+  .contact-card-text h3 {
+    grid-area: name;
+
+    margin: 0;
+    align-self: end;
+
     text-align: left;
   }
+
+  .contact-card-text .function {
+    grid-area: function;
+
+    margin: 0;
+    align-self: start;
+  }
+
+  .contact-card-text p:not(.function) {
+    grid-column: 1 / -1;
+
+    margin: 2px 0 0 2px;
+
+    text-align: left;
+  }
+
+  .contact-card-text p:not(.function) a {
+    display: inline;
+  } 
 
 }
     
