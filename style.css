@@ -1176,7 +1176,7 @@ body {
   text-align: left;
   text-indent: 30px;
   hyphens: none;
-  margin: 0 80px 0 80px;
+  margin: 0 40px 0 40px;
   padding: 15px 0 15px 0;
 
   font-family: "Trebuchet MS", Arial, sans-serif;
@@ -3991,6 +3991,57 @@ map-container.contacts-general-map iframe {
     margin: 0 auto 30px;
   }
 
+  .chevron-timeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    width: 100%;
+    margin: 0 auto;
+
+    box-sizing: border-box;
+  }
+
+  .chevron-item {
+
+    width: 20%;
+    min-height: 55px;
+    padding: 10px 10px;
+
+  }
+
+  .chevron-item.active {
+    width: 35%;
+
+  }
+
+  .chevron-year {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .chevron-detail {
+    width: 90%;
+    max-width: none;
+    margin: 0 auto 20px;
+    padding: 28px 40px;
+  }
+
+  .chevron-detail h3 {
+
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 21px;
+
+  }
+
+  .chevron-detail p {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
 }
 
 @media (max-width: 1024px) {
@@ -4253,6 +4304,66 @@ map-container.contacts-general-map iframe {
     padding: 20px 5%;
 
     margin: 0 auto 30px;
+  }
+
+  .chevron-timeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    width: 100%;
+    margin: 0 auto;
+
+    box-sizing: border-box;
+  }
+
+  .chevron-item {
+
+    width: 20%;
+    min-height: 55px;
+    padding: 10px 10px;
+
+  }
+
+  .chevron-item.active {
+
+    width: 50%;
+
+  }
+
+  .chevron-year {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .chevron-detail {
+    width: 100%;
+    max-width: none;
+    margin: 0 auto 20px;
+    padding: 28px 40px;
+  }
+
+  .chevron-detail h3 {
+
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 21px;
+
+  }
+
+  .chevron-detail p {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .chevron-year {
+    visibility: hidden;
+  }
+
+  .chevron-item.active .chevron-year {
+    visibility: visible;
   }
 
 }
