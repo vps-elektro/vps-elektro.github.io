@@ -2133,7 +2133,7 @@ body {
   align-items: center;
   gap: 30px;
 
-  width: 100%;
+  width: 95%;
   max-width: 850px;
   margin: 0 auto;
   padding: 20px 30px 5px 30px;
@@ -2148,8 +2148,9 @@ body {
 
 .leader-slider {
   position: relative;
-  width: 100%;
-  max-width: 850px;
+
+  width: 98%;
+  max-width: 750px;
   margin: 0 auto 0;
 
   background-color: white;
@@ -2185,7 +2186,7 @@ body {
 }
 
 .leader-image {
-  flex: 0 0 40%;
+  flex: 0 0 50%;
 }
 
 .leader-image img {
@@ -4663,6 +4664,45 @@ map-container.contacts-general-map iframe {
     );
 
     text-align: left;
+  }
+
+  .leader-slider {
+    max-width: 400px;
+
+    width: 98%;
+  }
+
+  .leader-content {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+
+    max-width: 400px;
+    width: 98%;
+    height: auto;
+  }
+
+  .leader-image {
+    flex: none;
+    width: 100%;
+  }
+
+  .leader-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .leader-quote {
+    flex: none;
+    width: 100%;
+  }
+
+  .contact-leader {
+    width: 100%;
+    margin-bottom: 0;
   }
 
 }
