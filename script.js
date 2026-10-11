@@ -437,6 +437,11 @@ photoSliders.forEach(function(slider) {
 
   const slides = slider.querySelectorAll(".photo-slide");
   const dots = slider.querySelectorAll(".slider-dot");
+
+  if (slides.length === 0) {
+    return;
+  }
+
   const prevButton = slider.querySelector(".slider-prev");
   const nextButton = slider.querySelector(".slider-next");
 
@@ -465,17 +470,29 @@ photoSliders.forEach(function(slider) {
     });
 
     slides[currentPhotoSlide].classList.add("active");
-    dots[currentPhotoSlide].classList.add("active");
-    
+
+    if (dots[currentPhotoSlide]) {
+
+      dots[currentPhotoSlide].classList.add("active");
+
+    }
   }
 
-  nextButton.addEventListener("click", function() {
-    showPhotoSlide(currentPhotoSlide + 1);
-  });
+  if (nextButton) {
+    
+      nextButton.addEventListener("click", function() {
+      showPhotoSlide(currentPhotoSlide + 1);
+    });
 
-  prevButton.addEventListener("click", function() {
-    showPhotoSlide(currentPhotoSlide - 1);
-  });
+  }
+
+  if (prevButton) {
+    
+      prevButton.addEventListener("click", function() {
+      showPhotoSlide(currentPhotoSlide - 1);
+    });
+
+  }
 
   dots.forEach(function(dot, index) {
     dot.addEventListener("click", function() {
