@@ -2018,11 +2018,11 @@ body {
 }
 
 .epa-badge {
-  position: absolute;
-  left: 5%;
-  top: 65%;
+  position: fixed;
+  left: 1%;
+  top: 90%;
 
-  z-index: 50;
+  z-index: 950;
 
   display: flex;
   align-items: center;
