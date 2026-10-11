@@ -417,6 +417,194 @@ processItems.forEach(function(item){
                   });
 
 
+function initProcessGradients() {
+
+  const content = document.querySelector(".process-navigation-wrapper");
+  const leftGradient = document.querySelector(".process-gradient-left");
+  const rightGradient = document.querySelector(".process-gradient-right");
+
+  if (!content || !leftGradient || !rightGradient) {
+
+    return;
+
+  }
+
+  function updateGradients() {
+
+    const maxScroll = content.scrollWidth - content.clientWidth;
+    const currentScroll = content.scrollLeft;
+
+    if (maxScroll <= 1) {
+      leftGradient.style.width = "0%";
+      rightGradient.style.width = "0%";
+      return;
+    }
+
+    const progress = Math.max(0, Math.min(1, currentScroll/maxScroll));
+
+    let outerGradient;
+    let middleGradient;
+
+    if (window.innerWidth < 1024) {
+      outerGradient = 20;
+      middleGradient = 10;
+    } else {
+      outerGradient = 30;
+      middleGradient = 15;
+    }
+
+    let leftWidth;
+    let rightWidth;
+
+    if (currentScroll <= 1) {
+      leftWidth = 0;
+      rightWidth = outerGradient;
+    } else if (currentScroll >= maxScroll - 1) {
+      leftWidth = outerGradient;
+      rightWidth = 0;
+    } else if (progress <= 0.5) {
+      const phase = progress / 0.5;
+
+      leftWidth = middleGradient * phase;
+
+      rightWidth = outerGradient - ((outerGradient - middleGradient) * phase);
+    } else {
+      const phase = (progress - 0.5) / 0.5;
+
+      leftWidth = middleGradient + ((outerGradient - middleGradient) * phase);
+
+      rightWidth = middleGradient * (1 - phase);
+    }
+
+    leftGradient.style.width = leftWidth + "%";
+    rightGradient.style.width = rightWidth + "%";
+  }
+
+  content.addEventListener("scroll", updateGradients, {
+    passive: true
+  });
+
+  window.addEventListener("resize", updateGradients);
+  window.addEventListener("load", updateGradients);
+
+  updateGradients();
+}
+
+initProcessGradients();
+
+
+function initProcessDots() {
+  const navigation = document.querySelector(".process-navigation")
+  const wrapper = document.querySelector(".process-navigation-wrapper");
+
+  if (!navigation || !wrapper) {
+    return;
+  }
+
+  const items = Array.from(navigation.querySelectorAll(".process-item"));
+
+  if (items.length === 0) {
+
+    return;
+
+  }
+
+  const dotsContainer = document.createElement("div");
+  dotsContainer.className = "process-dots";
+
+  navigation.insertAdjacentElement("afterend", dotsContainer);
+
+  const dots = items.map(function(item, index) {
+
+    const dot = document.createElement("button");
+
+    dot.type = "button";
+    dot.className = "process-dot";
+
+    dot.setAttribute(
+      "aria-label",
+      "Zobrazit proces" + item.textContent.trim()
+    );
+
+    dotsContainer.appendChild(dot);
+
+    dot.addEventListener("click", function() {
+      item.click();
+    });
+
+    return dot;
+
+  });
+
+  function updateActiveDot() {
+
+    const activeIndex = items.findIndex(function(item) {
+      return item.classList.contains("active");
+    });
+
+    dots.forEach(function(dot, index) {
+
+      const isActive = index === activeIndex;
+
+      dot.classList.toggle("active", isActive);
+
+      dot.setAttribute("aria-current", isActive ? "step" : "false");
+
+    });
+
+  }
+
+  function centerActiveItem(item) {
+
+    const wrapperRect = wrapper.getBoundingClientRect();
+    const itemRect = item.getBoundingClientRect();
+
+    const targetScroll = 
+      wrapper.scrollLeft + (itemRect.left - wrapperRect.left) + itemRect.width / 2 - wrapper.clientWidth / 2;
+
+      wrapper.scrollTo({
+        left: targetScroll,
+        behavior: "smooth"
+      });
+  }
+
+  function updateDotsVisibility() {
+
+    const maxScroll = wrapper.scrollWidth - wrapper.clientWidth;
+
+    const isScrollable = maxScroll > 1;
+
+    dotsContainer.classList.toggle("visible", isScrollable);
+  }
+
+  items.forEach(function(item) {
+    item.addEventListener("click", function() {
+      updateActiveDot();
+      centerActiveItem(item);
+    });
+  });
+
+  window.addEventListener("resize", function() {
+
+    updateDotsVisibility();
+
+    const activeItem = navigation.querySelector(".process-item.active");
+
+    if(activeItem) {
+      centerActiveItem(activeItem);
+    }
+
+  });
+  
+  window.addEventListener("load", updateDotsVisibility);
+
+  updateActiveDot();
+  updateDotsVisibility();
+}
+
+initProcessDots();
+
+
 const departmentTitle = document.querySelector(".department-title");
 const processNavigation = document.getElementById("process-navigation");
 

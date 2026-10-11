@@ -2288,13 +2288,28 @@ body {
 }
 
 .process-navigation {
+  position: relative;
   z-index: 900;
   width: 100%;
   background-color: white;
   padding: 10px 0;
   box-sizing: border-box;
+  height: 200px;
+}
 
-  margin-bottom: 10px;
+.process-navigation-wrapper {
+  width: 100%;
+  height: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.process-navigation-wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 #process-navigation {
@@ -2303,12 +2318,53 @@ body {
 
 
 .process-navigation-inner {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  display: flex;
+  justify-content: safe center;
+  align-items: center;
+
+  height: 180px;
+
   gap: 15px;
 
-  width: 92%;
-  margin: 0 auto;
+  width: max-content;
+  min-width: 100%;
+
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.process-gradient {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  width: 0;
+
+  pointer-events: none;
+  z-index: 10;
+
+  transition: width 0.15s linear;
+}
+
+.process-gradient-left {
+  left: 0;
+
+  background: linear-gradient(
+    to right,
+    white 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.process-gradient-right {
+  right: 0;
+
+  background: linear-gradient(
+    to left,
+    white 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
 .department-page[data-department="kabely"]
@@ -2317,9 +2373,10 @@ body {
 }
 
 .process-item {
-  width: 100%;
-  box-sizing: border-box;
-  aspect-ratio: 1 / 1;
+  flex: 0 0 150px;
+  
+  width: 150px;
+  height: 170px;
 
   display: flex;
   flex-direction: column;
@@ -2351,6 +2408,8 @@ body {
 .process-item span {
   font-family: "Trebuchet MS", Arial, sans-serif;
   font-size: 16px;
+
+  margin-top: auto;
   color: #1e532f;
 }
 
@@ -2376,6 +2435,59 @@ body {
   color: white;
 }
 
+.process-dots {
+  display: none;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+
+  width: 100%;
+
+  padding: 10px 0 10px 0;
+
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.process-dots.visible {
+  display: flex;
+}
+
+.process-dot {
+  flex: 0 0 11px;
+
+  width: 11px;
+  height: 11px;
+
+  padding: 0;
+
+  border: 2px solid #1e532f;
+  border-radius: 50%;
+
+  background-color: transparent;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.process-dot.active {
+  background-color: #1e532f;
+}
+
+.procces-dot:hover {
+  transform: scale(1.1);
+}
+
+.process-dot:focus-visible {
+  outline: 2px solid #1e532f;
+  outline-offset: 3px;
+}
+
 /* Definice procesů */
 
 .process-content {
@@ -2391,8 +2503,8 @@ body {
   font-family: "Trebuchet MS", Arial, sans-serif;
   font-size: 32px;
   color: #1e532f;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 .process-detail.active {
@@ -2412,9 +2524,11 @@ body {
   height: 400px;
   min-height: 0;
 
-  margin: 0 auto 10px auto;
+  margin: 0 auto 20px auto;
 
   background-color: white;
+
+  overflow: hidden;
 }
 
 .process-content-slider {
@@ -2475,6 +2589,8 @@ body {
   display: relative;
   width: 100%;
   height: auto;
+
+  overflow: hidden;
 }
 
 .photo-slide {
@@ -4289,6 +4405,7 @@ map-container.contacts-general-map iframe {
     height: auto;
     min-width: 0;
     flex: none;
+
   }
 
   .process-content-text {
@@ -4321,6 +4438,18 @@ map-container.contacts-general-map iframe {
     width: 100%;
     height: auto;
     object-fit: contain;
+  }
+
+  .process-bottom-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .process-bottom-button {
+    width: 350px;
+    min-width: 250px;
   }
 
 } 
@@ -4650,6 +4779,20 @@ map-container.contacts-general-map iframe {
     min-width: 0;
     max-width: 500px;
     width: 98%;
+  }
+
+  .department-header {
+
+    padding: 5px 5px;
+
+    background: linear-gradient(
+      to right, 
+      #1e532f 0%,
+      rgba(30, 83, 47, 0.75) 90%,
+      rgba(30, 83, 47, 0) 100%
+    );
+
+    text-align: left;
   }
 
 }
