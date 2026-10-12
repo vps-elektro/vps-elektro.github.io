@@ -1629,7 +1629,7 @@ function showProductPage(page) {
   productItems.forEach(function(item, index) {
 
     if (index >= start && index < end) {
-      item.style.display = "flex";
+      item.style.display = "";
     } else {
       item.style.display = "none";
     }
