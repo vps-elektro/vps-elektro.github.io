@@ -1072,7 +1072,7 @@ if (
 
 const actualityItems = document.querySelectorAll(".actualities-content-block");
 
-const actualitiesPerPage = 5;
+const actualitiesPerPage = 6;
 
 let currentActualityPage = 1;
 
