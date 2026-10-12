@@ -4827,8 +4827,7 @@ map-container.contacts-general-map iframe {
     justify-content: center;
     align-items: center;
 
-    width: 350px;
-    max-width: 100%;
+    width: 80%;
 
     height: auto;
 
