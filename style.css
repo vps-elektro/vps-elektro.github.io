@@ -2374,10 +2374,10 @@ body {
 }
 
 .process-item {
-  flex: 0 0 150px;
+  flex: 0 0 130px;
   
-  width: 150px;
-  height: 170px;
+  width: 130px;
+  height: 150px;
 
   display: flex;
   flex-direction: column;
