@@ -2584,6 +2584,8 @@ body {
   min-height: 0;
 
   overflow: hidden;
+
+  touch-action: pan-y
 }
 
 .photo-slides {
