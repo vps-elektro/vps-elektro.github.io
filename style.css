@@ -4866,11 +4866,6 @@ map-container.contacts-general-map iframe {
 
 @media (max-width: 715px) {
 
-  .contacts-general {
-    width: 95%;
-    height: auto;
-    }
-
   .contacts-section-header {
     grid-column: 1 / -1;
     width: 100%;
@@ -4884,7 +4879,7 @@ map-container.contacts-general-map iframe {
   .contact-card {
     display: grid;
 
-    grid-template-columns: 200px minmax(0, 1fr);
+    grid-template-columns: 150px minmax(0, 1fr);
     grid-template-rows: auto auto;
     grid-template-areas: 
       "photo name"
@@ -4924,7 +4919,7 @@ map-container.contacts-general-map iframe {
     margin: 0;
     align-self: end;
 
-    text-align: left;
+    text-align: center;
   }
 
   .contact-card-text .function {
@@ -4932,6 +4927,7 @@ map-container.contacts-general-map iframe {
 
     margin: 0;
     align-self: start;
+    text-align: center;
   }
 
   .contact-card-text p:not(.function) {
@@ -5124,6 +5120,11 @@ map-container.contacts-general-map iframe {
 }
     
 @media (max-width: 650px) {
+
+  .contacts-general {
+    width: 95%;
+    height: auto;
+    }
 
   .certification-cards { 
     justify-content: flex-start;
