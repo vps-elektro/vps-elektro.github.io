@@ -4905,7 +4905,7 @@ map-container.contacts-general-map iframe {
     grid-area: photo;
 
     width: 150px;
-    height: 150px;
+    height: 200px;
   }
 
   .contact-card-image img {
