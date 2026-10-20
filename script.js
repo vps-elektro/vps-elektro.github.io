@@ -687,6 +687,48 @@ photoSliders.forEach(function(slider) {
       showPhotoSlide(index);
     });
   });
+
+  if (slides.length > 1) {
+
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+    slider.addEventListener("touchstart", function(event) {
+
+      if (window.innerWidth > 1024) return;
+
+      touchStartX = event.changedTouches[0].clientX;
+      touchStartY = event.changedTouches[0].clientY;
+    }, { passive: true });
+
+    slider.addEventListener("touchend", function(event) {
+
+      if (window.innerWidth > 1024) return;
+
+      const touchEndX = event.changedTouches[0].clientX;
+      const touchEndY = event.changedTouches[0].clientY;
+
+      const distanceX = touchEndX - touchStartX;
+      const distanceY = touchEndY - touchStartY;
+
+      if (
+        
+        Math.abs(distanceX) > 50 &&
+        Math.abs(distanceX) > Math.abs(distanceY)
+
+      ) {
+
+        if (distanceX < 0) {
+          showPhotoSlide(currentPhotoSlide + 1);
+        } else {
+          showPhotoSlide(currentPhotoSlide - 1);
+        }
+
+      }
+
+    }, { passive: true })
+
+  }
   
 });
 

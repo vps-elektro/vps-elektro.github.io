@@ -3039,6 +3039,11 @@ map-container.contacts-general-map iframe {
   color: #111;
 }
 
+.career-content-block.open {
+  height: auto;
+  min-height: 330px;
+}
+
 .career-content-text-block {
   width: 85%;
   margin: 0 auto;
