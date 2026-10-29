@@ -2518,11 +2518,9 @@ body {
   display: flex;
   align-items: stretch;
 
-  width: 70%;
-  min-width: 980px;
-  max-width: 1500px;
+  width: 1200px;
 
-  height: 400px;
+  height: 380px;
   min-height: 0;
 
   margin: 0 auto 20px auto;
@@ -2535,11 +2533,11 @@ body {
 .process-content-slider {
   flex: 0 0 auto;
 
-  width: calc(400px * (2048 / 1536));
+  width: calc(380px * (1024 / 683));
 }
 
 .process-content-block.portrait .process-content-slider {
-  width: calc(400px / (2048 / 1536));
+  width: calc(380px / (683 / 1024));
 }
 
 .process-content-text {
@@ -4109,6 +4107,71 @@ map-container.contacts-general-map iframe {
 
 }
 
+@media (max-width: 1250px) {
+
+    .process-content-block,
+  .process-content-block.portrait {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: 
+      "image"
+      "title";
+
+      grid-auto-rows: auto;
+
+    width: 500px;
+    max-width: 500px;
+    min-width: 0;
+
+    height: auto;
+    min-height: 0;
+  }
+
+  .process-content-slider,
+  .process-content-block.portrait .process-content-slider {
+    grid-area: image;
+
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    flex: none;
+
+  }
+
+  .process-content-text {
+    display: contents;
+  }
+
+  .process-content-text h3 {
+    grid-area: title;
+
+    margin: 20px 20px 10px;
+    text-align: center;
+  }
+
+  .process-content-text p {
+    grid-area: auto;
+
+    margin: 0 25px 15px;
+
+    text-align: center;
+  }
+
+  .photo-slider, 
+  .photo-slides {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+  }
+
+  .photo-slide {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+}
+
 @media (max-width: 1150px) {
 
   .about-introduction {
@@ -4373,67 +4436,6 @@ map-container.contacts-general-map iframe {
 
   .services-video-box {
     width: 55%;
-  }
-
-  .process-content-block,
-  .process-content-block.portrait {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: 
-      "image"
-      "title";
-
-      grid-auto-rows: auto;
-
-    width: 500px;
-    max-width: 500px;
-    min-width: 0;
-
-    height: auto;
-    min-height: 0;
-  }
-
-  .process-content-slider,
-  .process-content-block.portrait .process-content-slider {
-    grid-area: image;
-
-    width: 100%;
-    height: auto;
-    min-width: 0;
-    flex: none;
-
-  }
-
-  .process-content-text {
-    display: contents;
-  }
-
-  .process-content-text h3 {
-    grid-area: title;
-
-    margin: 20px 20px 10px;
-    text-align: center;
-  }
-
-  .process-content-text p {
-    grid-area: auto;
-
-    margin: 0 25px 15px;
-
-    text-align: center;
-  }
-
-  .photo-slider, 
-  .photo-slides {
-    width: 100%;
-    height: auto;
-    min-height: 0;
-  }
-
-  .photo-slide {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
   }
 
   .process-bottom-navigation {
